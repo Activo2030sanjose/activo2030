@@ -29,8 +29,8 @@ html,body{margin:0;min-height:100%}
 body{font-family:var(--f);color:#fff;background:radial-gradient(120% 140% at 85% -10%,var(--azul) 0%,var(--noche) 70%);min-height:100vh;display:flex;flex-direction:column;
   padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
-.saw{position:fixed;width:min(720px,120vw);height:min(720px,120vw);right:-18vw;top:-22vw;opacity:.14;color:var(--amarillo);pointer-events:none}
-.saw svg{width:100%;height:100%;animation:spin 90s linear infinite}
+.saw{position:fixed;width:min(720px,120vw);height:min(720px,120vw);right:-18vw;top:-22vw;opacity:.16;pointer-events:none}
+.saw img{width:100%;height:100%;animation:spin 90s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 main{position:relative;flex:1;width:100%;max-width:1000px;margin:0 auto;display:flex;flex-direction:column;justify-content:center;gap:clamp(24px,4vw,40px);
   padding-block:clamp(28px,6vw,64px);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -64,7 +64,7 @@ footer div{max-width:1000px;margin:0 auto;display:flex;justify-content:space-bet
 </head>
 <body>
 <canvas id="dots" aria-hidden="true"></canvas>
-<div class="saw" aria-hidden="true"><svg viewBox="-100 -100 200 200"><path id="sawpath" fill="currentColor" fill-rule="evenodd"/></svg></div>
+<div class="saw" aria-hidden="true"><img src="img/sierra.png" alt=""></div>
 <main>
   <header>
     <img src="img/logo-color.png" alt="Activo 20-30 Internacional San José #532">
@@ -94,9 +94,7 @@ footer div{max-width:1000px;margin:0 auto;display:flex;justify-content:space-bet
 <div class="stripe"><i></i><i></i><i></i></div>
 <footer><div><span>© 2026 Club Activo 20-30 Internacional de San José #532</span><span>«La juventud para ser servida debe servir»</span></div></footer>
 <script>
-(function(){var d='',T=22,R=96,r=78,p=function(a,x){return (Math.cos(a)*x).toFixed(2)+' '+(Math.sin(a)*x).toFixed(2)};
-  for(var k=0;k<T;k++){var a0=k/T*2*Math.PI,a1=(k+.62)/T*2*Math.PI,a2=(k+1)/T*2*Math.PI;d+=(k?'L':'M')+p(a0,r)+' Q'+p((a0+a1)/2,R+4)+' '+p(a1,R)+' L'+p(a2,r)+' '}
-  document.getElementById('sawpath').setAttribute('d',d+'Z M0 -66 A66 66 0 1 0 0.01 -66 Z')})();
+
 (function(){var c=document.getElementById('dots'),x=c.getContext('2d'),w,h,still=matchMedia('(prefers-reduced-motion: reduce)').matches;
   function size(){var dp=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*dp;c.height=h*dp;x.setTransform(dp,0,0,dp,0,0)}
   function draw(t){x.clearRect(0,0,w,h);var g=20,tt=t/1000;
