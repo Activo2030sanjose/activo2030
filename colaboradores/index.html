@@ -488,6 +488,17 @@ body:has(#v-prc:not([hidden]),#v-timeoff:not([hidden]),#v-payroll:not([hidden]))
 .prc-head .prc-ico{width:38px;height:38px}.prc-head .prc-txt b{font-size:1.25rem}.prc-head .prc-txt span{font-size:.58rem;letter-spacing:.2em}
 #h-user{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
 @media (max-width:560px){.head .wrap{flex-wrap:wrap;row-gap:8px}.head .sp{display:none}#h-user{width:100%;justify-content:flex-start}.head .chip{padding:5px 10px;font-size:.75rem}.head .chip .lbl{display:inline}.poster-top{margin-bottom:12px}.poster-in{padding-top:14px}}
+
+.previa{background:#e9ecf6;border-radius:16px;padding:12px;max-height:70vh;overflow:auto;margin-bottom:12px}
+.hoja{background:#fff;color:#1c2140;border-radius:10px;padding:clamp(14px,3vw,26px);font-size:.85rem;line-height:1.5;box-shadow:0 10px 30px -14px rgba(0,0,0,.4)}
+.h-top{display:flex;gap:12px;align-items:center;border-bottom:2px solid #001489;padding-bottom:10px;flex-wrap:wrap}.h-top img{width:46px;height:46px}.h-top b{display:block;font-size:.95rem}.h-top span{font-size:.75rem;color:#5f6584}
+.h-fin{margin-left:auto;text-align:right;font-size:.7rem;color:#5f6584}.h-fin b{display:block;font-size:.95rem;color:#1c2140}
+.h-datos{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:12px 0}.h-datos i{display:block;font-style:normal;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#5f6584;font-weight:900}
+.h-tab{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}.h-tab th{background:#001489;color:#fff;padding:6px 8px;font-size:.72rem;text-align:left}.h-tab th:nth-child(n+3),.h-tab td:nth-child(n+3){text-align:right}
+.h-tab td{padding:6px 8px;border-bottom:1px solid #e4e7f1}.h-tab .tot td{font-weight:900}.h-tab .neto td{font-weight:900;background:#fedd00}
+.h-banco{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-size:.75rem;color:#5f6584;flex-wrap:wrap}
+.carta p{margin:0 0 12px;text-align:justify}.c-top{text-align:right}.c-top img{width:60px}.c-raya{height:5px;margin:8px 0 18px;background:linear-gradient(90deg,#fedd00 0 20%,#da291c 20% 50%,#001489 50%)}
+.c-firma{text-align:center;margin-top:40px;border-top:1px solid #1c2140;padding-top:8px;width:min(260px,80%);margin-left:auto;margin-right:auto}.c-firma b,.c-firma span,.c-firma small{display:block}.c-firma small{color:#5f6584;font-size:.68rem;margin-top:4px}
 /* Panel lateral */
 .scrim{position:fixed;inset:0;background:rgba(0,10,71,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);z-index:20}
 .sheet{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--surface);z-index:21;overflow:auto;
@@ -738,7 +749,7 @@ footer img{width:34px;height:34px}
   <section class="poster mini"><canvas data-dots></canvas><div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
     <div class="wrap poster-in"><div class="poster-top"><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Pay<em>roll</em></h1></div>
   </section>
-  <div class="wrap sube prc-body"><div class="card"><nav class="tabs" id="pay-tabs"><button data-pay="boletas">Boleta de pago</button><button data-pay="cartas">Cartas</button><button data-pay="horas">Horas extra</button></nav><div class="pad-x pay" id="pay-cont"></div></div></div>
+  <div class="wrap sube prc-body"><div class="card"><nav class="tabs" id="pay-tabs"><button data-pay="boletas">Boleta de pago</button><button data-pay="cartas">Cartas</button></nav><div class="pad-x pay" id="pay-cont"></div></div></div>
 </main>
 <main id="v-rh" hidden>
   <section class="band"><canvas data-dots></canvas>
@@ -843,11 +854,11 @@ footer img{width:34px;height:34px}
 <div class="scrim" id="scrim" hidden></div>
 <aside class="sheet" id="sheet" hidden aria-modal="true" role="dialog"></aside>
 <div class="toast" id="toast" hidden role="status"></div>
-<script src="../lib/estado-cuenta.js?v=1793508296"></script>
-<script src="../lib/almacen.js?v=1793508296"></script>
-<script src="../lib/operaciones.js?v=1793508296"></script>
-<script src="../lib/rh.js?v=1793508296"></script>
-<script src="../lib/portal.js?v=1793508296"></script>
+<script src="../lib/estado-cuenta.js?v=1793508511"></script>
+<script src="../lib/almacen.js?v=1793508511"></script>
+<script src="../lib/operaciones.js?v=1793508511"></script>
+<script src="../lib/rh.js?v=1793508511"></script>
+<script src="../lib/portal.js?v=1793508511"></script>
 
 </body>
 </html>
