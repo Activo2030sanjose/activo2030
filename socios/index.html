@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-zhXBNdq3+zjbgUQS1q4DsMfjHvcX7crTSMTduWkUMNQ='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'; worker-src 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-zhXBNdq3+zjbgUQS1q4DsMfjHvcX7crTSMTduWkUMNQ='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'; worker-src 'self'; manifest-src 'self'; frame-src blob:">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#000a47">
 <style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
@@ -347,6 +347,47 @@ table.ed .input{padding:.4rem .5rem;font-size:.8125rem}
 .mt .mini-l .input{width:100%}
 .x{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--surface);cursor:pointer;color:var(--bad)}
 @media (max-width:760px){.ses-row{grid-template-columns:56px 1fr;}.ses-row .acts,.ses-row .pill{grid-column:1/-1;justify-self:start}.otra{grid-template-columns:1fr 1fr}.list.usu li{grid-template-columns:1fr auto}}
+
+/* ---------- Colaboradores / PRC ---------- */
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.app{display:flex;flex-direction:column;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 18px;cursor:pointer;box-shadow:var(--shadow);text-align:center;color:var(--fg);transition:transform .15s}
+.app:hover{transform:translateY(-3px)}
+.app-ico{width:150px;height:84px;display:grid;place-items:center;color:var(--azul)}
+.app-ico.prc{display:flex;flex-direction:column;justify-content:center;line-height:1;color:var(--rojo)}
+.app-ico.prc b{font-weight:300;font-size:2.1rem;letter-spacing:.04em}.app-ico.prc small{font-size:.62rem;letter-spacing:.18em;color:var(--azul);font-weight:900;margin-top:4px}
+.app-t{font-weight:900;font-size:1.05rem}.app-d{font-size:.8125rem;color:var(--muted)}
+.prc-bar{background:var(--azul);color:#fff;border-bottom:4px solid var(--amarillo)}
+.prc-bar .wrap{display:flex;align-items:center;gap:18px;padding-block:14px;flex-wrap:wrap}
+.prc-logo{display:flex;align-items:center;gap:10px;line-height:1}.prc-logo b{font-weight:300;font-size:1.9rem;letter-spacing:.03em}.prc-logo span{font-size:.62rem;letter-spacing:.14em;font-weight:900;border-left:2px solid var(--amarillo);padding-left:10px;color:var(--amarillo)}
+.prc-perfil{margin-left:auto;display:flex;gap:10px;align-items:center}.prc-perfil .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:900}
+.prc-perfil b{display:block}.prc-perfil span{font-size:.8125rem;opacity:.8}
+.chip-l{margin-left:auto;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:999px;padding:7px 14px;font-weight:700;cursor:pointer}
+.prc-body{padding-block:28px 60px}.prc-h{font-size:1.6rem;margin-bottom:6px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:16px}
+.tile{display:flex;flex-direction:column;border:0;border-radius:18px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow);cursor:pointer;text-align:left;padding:0;color:var(--fg);transition:transform .15s}
+.tile:hover{transform:translateY(-3px)}
+.tile-top{background:var(--azul);color:#fff;height:130px;display:grid;place-items:center}
+.tile:nth-child(4n+2) .tile-top{background:var(--rojo)}.tile:nth-child(4n+3) .tile-top{background:#0a1fa8}.tile:nth-child(4n+4) .tile-top{background:var(--noche)}
+.tile-b{padding:16px 18px}.tile-b b{display:block;font-size:1.1rem}.tile-b small{color:var(--muted)}
+.to-card{padding:clamp(16px,3vw,26px)}.to-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.to-grid{display:grid;grid-template-columns:1fr 320px;gap:26px}.to-nav{display:flex;justify-content:space-between;margin-bottom:6px}
+.to-cal{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.mes-t{display:flex;justify-content:center;gap:18px;color:var(--rojo);font-weight:900;text-transform:lowercase;margin-bottom:8px}
+.dias{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}.dias i{font-style:normal;font-size:.75rem;color:var(--muted);padding:4px 0}
+.dias .d{padding:7px 0;border-radius:8px;font-size:.875rem;font-variant-numeric:tabular-nums;border:1.5px solid transparent;position:relative}
+.dias .d.nl{background:var(--surface-2);color:var(--muted)}.dias .d.hoy{border-color:var(--azul);font-weight:900}
+.dias .d.apr::after,.dias .d.pen::after{content:"";position:absolute;left:4px;right:4px;bottom:2px;height:3px;border-radius:2px;background:var(--ok)}.dias .d.pen::after{background:#c25e00}
+.dias .d.fer{background:var(--fg);color:var(--bg)}
+.ley{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;font-size:.75rem;color:var(--muted)}.ley i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-2px;border:1px solid var(--line)}
+.ley .lh{border:2px solid var(--azul)}.ley .ln{background:var(--surface-2)}.ley .la{background:var(--ok)}.ley .lp{background:#c25e00}.ley .lf{background:var(--fg)}
+.to-side h3{font-size:1rem;border-bottom:1px solid var(--line);padding-bottom:8px;margin:14px 0 10px}
+.saldo-row,.prox{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;padding:6px 0;font-size:.9rem}.prox small{display:block;color:var(--muted)}
+.pay h2{font-size:1.3rem;margin:6px 0 14px}.pad-x{padding:18px 22px}
+table.tabla{width:100%;border-collapse:collapse;font-size:.875rem}table.tabla th{text-align:left;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:10px 12px;border-bottom:2px solid var(--line);white-space:nowrap}
+table.tabla td{padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+.visor{width:100%;height:min(70vh,720px);border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:12px}
+.otra.bl{grid-template-columns:2.4fr .7fr 1fr 1fr 32px}
+@media (max-width:860px){.to-grid{grid-template-columns:1fr}.to-cal{grid-template-columns:1fr}}
 /* Panel lateral */
 .scrim{position:fixed;inset:0;background:rgba(0,10,71,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);z-index:20}
 .sheet{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--surface);z-index:21;overflow:auto;
@@ -573,12 +614,37 @@ footer img{width:34px;height:34px}
   </div>
 </main>
 
+<!-- ============ COLABORADORES ============ -->
 <main id="v-colab" hidden>
   <section class="band"><canvas data-dots></canvas>
     <div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
-    <div class="wrap m-hero"><span class="eyebrow">Colaboradores</span><h1>Portal en construcción</h1><p>Pronto vas a encontrar aquí las herramientas para colaboradores del club.</p></div>
+    <div class="wrap m-hero"><span class="eyebrow">Mis aplicaciones</span><h1 id="col-hola">Colaboradores</h1><p id="col-sub"></p></div>
   </section>
+  <div class="wrap lift"><div class="apps" id="col-apps"></div></div>
 </main>
+<main id="v-prc" hidden>
+  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><div class="prc-perfil" id="prc-perfil"></div></div></section>
+  <div class="wrap prc-body"><h2 class="prc-h">Mis gestiones</h2><p class="muted" id="prc-pend"></p><div class="tiles" id="prc-tiles"></div></div>
+</main>
+<main id="v-timeoff" hidden>
+  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div></section>
+  <div class="wrap prc-body"><div class="card to-card"><div class="to-head"><h2>Tiempo libre</h2><button class="btn btn-red" id="to-crear" style="padding:.6rem 1.2rem">Crear ausencia</button></div>
+    <div class="to-grid"><div><div class="to-nav"><button class="mini" id="to-prev" aria-label="Meses anteriores">‹</button><button class="mini" id="to-next" aria-label="Meses siguientes">›</button></div><div class="to-cal" id="to-cal"></div>
+      <div class="ley"><span><i class="lh"></i>Hoy</span><span><i class="ll"></i>Día laborable</span><span><i class="ln"></i>Día no laborable</span><span><i class="la"></i>Aprobado</span><span><i class="lp"></i>Pendiente</span><span><i class="lf"></i>Feriado</span></div></div>
+      <aside class="to-side" id="to-side"></aside></div></div></div>
+</main>
+<main id="v-payroll" hidden>
+  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div></section>
+  <div class="wrap prc-body"><div class="card"><nav class="tabs" id="pay-tabs"><button data-pay="boletas">Boleta de pago</button><button data-pay="cartas">Cartas</button><button data-pay="horas">Horas extra</button></nav><div class="pad-x pay" id="pay-cont"></div></div></div>
+</main>
+<main id="v-rh" hidden>
+  <section class="band"><canvas data-dots></canvas>
+    <div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
+    <div class="wrap m-hero"><span class="eyebrow">Recursos humanos</span><h1>Administración de personal</h1><p>Colaboradores, boletas de pago, solicitudes y configuración.</p></div>
+  </section>
+  <div class="wrap lift"><div class="card"><nav class="tabs" id="rh-tabs"><button data-rhtab="colaboradores">Colaboradores</button><button data-rhtab="boletas">Boletas</button><button data-rhtab="solicitudes">Solicitudes <span class="badge-n" id="rh-pend" hidden></span></button><button data-rhtab="config">Configuración</button></nav><div id="rh-cont"></div></div></div>
+</main>
+
 
 <main id="v-macero" hidden>
   <section class="band">
@@ -677,6 +743,7 @@ footer img{width:34px;height:34px}
 <script src="../lib/estado-cuenta.js"></script>
 <script src="../lib/almacen.js"></script>
 <script src="../lib/operaciones.js"></script>
+<script src="../lib/rh.js"></script>
 <script src="../lib/portal.js"></script>
 
 </body>
