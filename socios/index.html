@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-zhXBNdq3+zjbgUQS1q4DsMfjHvcX7crTSMTduWkUMNQ='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-zhXBNdq3+zjbgUQS1q4DsMfjHvcX7crTSMTduWkUMNQ='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; object-src 'none'; base-uri 'none'; form-action 'none'; worker-src 'self'; manifest-src 'self'">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#000a47">
 <style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
@@ -18,6 +18,9 @@
 </script>
 <title>Estados de Cuenta Activo 20-30</title>
 <meta name="robots" content="noindex, nofollow">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="../img/logo-color.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap">
 <style>
@@ -313,6 +316,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .s-actions{margin-top:16px}
 
 /* ---------- Producción ---------- */
+.ult{display:block;font-size:.75rem;color:var(--muted);margin-top:4px}
+.nm-lista{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px;margin:0 0 12px;max-height:240px;overflow:auto;border:1px solid var(--line);border-radius:12px;padding:10px}
 .err{color:var(--bad);font-size:.875rem;font-weight:700;min-height:1.2em;margin:0 0 10px}
 .tabs{display:flex;gap:4px;overflow-x:auto;padding:10px 12px 0;border-bottom:1px solid var(--line);scrollbar-width:thin}
 .tabs button{border:0;background:transparent;padding:10px 14px;font-weight:900;font-size:.875rem;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;display:inline-flex;gap:6px;align-items:center}
@@ -426,6 +431,22 @@ footer img{width:34px;height:34px}
 </header>
 
 
+<!-- ============ CONTRASEÑA ============ -->
+<main id="v-clave" hidden>
+  <section class="band"><canvas data-dots></canvas>
+    <div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
+    <div class="wrap m-hero"><span class="eyebrow">Seguridad</span><h1 id="cl-titulo">Creá tu contraseña</h1><p id="cl-sub"></p></div>
+  </section>
+  <div class="wrap lift">
+    <form class="card ses" id="f-clave" novalidate style="max-width:520px">
+      <div class="field"><label for="cl-n1">Contraseña nueva</label><div class="pw"><input class="input" id="cl-n1" type="password" autocomplete="new-password"><button type="button" data-peek="cl-n1">Mostrar</button></div></div>
+      <div class="field"><label for="cl-n2">Repetí la contraseña</label><input class="input" id="cl-n2" type="password" autocomplete="new-password"></div>
+      <p class="muted">Mínimo 8 caracteres, con letras y números.</p>
+      <div class="foot"><button type="button" class="btn btn-soft" id="cl-cancelar">Cancelar</button><button class="btn btn-red" type="submit">Guardar contraseña</button></div>
+    </form>
+  </div>
+</main>
+
 <!-- ============ LOGIN ============ -->
 <main id="v-login">
   <section class="band">
@@ -469,7 +490,7 @@ footer img{width:34px;height:34px}
   <section class="band">
     <canvas data-dots></canvas>
     <div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
-    <div class="wrap s-hero"><span class="eyebrow rv">Hola de nuevo</span><h1 class="rv d1" id="s-nombre"></h1><p class="s-sub rv d2" id="s-sub"></p><div class="s-actions rv d3" id="s-macero" hidden><button type="button" class="btn btn-yellow" data-go="macero" style="padding:.6rem 1.2rem">Soy Macero · pasar lista</button></div></div>
+    <div class="wrap s-hero"><span class="eyebrow rv">Hola de nuevo</span><h1 class="rv d1" id="s-nombre"></h1><p class="s-sub rv d2" id="s-sub"></p><div class="s-actions rv d3"><button type="button" class="btn btn-soft" data-notif hidden style="padding:.6rem 1.2rem;margin-right:8px">🔔 Activar notificaciones</button></div><div class="s-actions rv d3" id="s-macero" hidden><button type="button" class="btn btn-yellow" data-go="macero" style="padding:.6rem 1.2rem">Soy Macero · pasar lista</button></div></div>
   </section>
   <div class="wrap lift">
     <div class="card saldo rv d1">
@@ -515,7 +536,7 @@ footer img{width:34px;height:34px}
   <div class="wrap lift">
     <div class="card">
       <nav class="tabs" id="a-tabs" role="tablist" aria-label="Secciones de Tesorería">
-        <button role="tab" data-tab="socios">Socios</button><button role="tab" data-tab="sesiones">Sesiones</button>
+        <button role="tab" data-tab="socios">Socios</button><button role="tab" data-tab="notificaciones">Notificaciones</button><button role="tab" data-tab="sesiones">Sesiones</button>
         <button role="tab" data-tab="revision">Revisión <span class="badge-n" id="rev-n" hidden></span></button><button role="tab" data-tab="descargas">Descargas</button>
         <button role="tab" data-tab="montos">Montos y datos</button><button role="tab" data-tab="usuarios" id="tab-usuarios">Usuarios</button><button role="tab" data-tab="config" id="tab-config">Configuración</button>
       </nav>
@@ -542,6 +563,7 @@ footer img{width:34px;height:34px}
         <h2 style="margin-top:26px">Socios juveniles</h2><p class="muted">No tienen estado de cuenta. Este reporte muestra lo que han aportado.</p>
         <div class="foot" style="justify-content:flex-start"><button class="btn btn-soft" id="dl-juv">Reporte de aportes (PDF)</button></div>
       </section>
+      <section class="a-panel pad" id="p-notificaciones" hidden><div id="notif-form"></div></section>
       <section class="a-panel pad" id="p-montos" hidden><div id="mon-form"></div></section>
       <section class="a-panel" id="p-usuarios" hidden>
         <div class="tools"><h2>Usuarios</h2><button class="btn btn-soft" id="usu-imp" style="padding:.6rem 1.1rem">Importar usuarios</button><input type="file" id="usu-file" accept="application/json,.json" hidden><button class="btn btn-blue" id="usu-new" style="padding:.6rem 1.1rem">+ Nuevo usuario</button></div><ul class="list usu" id="usu-rows"></ul>
@@ -654,6 +676,7 @@ footer img{width:34px;height:34px}
 <div class="toast" id="toast" hidden role="status"></div>
 <script src="../lib/estado-cuenta.js"></script>
 <script src="../lib/almacen.js"></script>
+<script src="../lib/operaciones.js"></script>
 <script src="../lib/portal.js"></script>
 
 </body>
