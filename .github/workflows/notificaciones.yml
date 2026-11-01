@@ -1,0 +1,29 @@
+name: Notificaciones del portal
+on:
+  push:
+    branches: [datos]
+    paths: ['notif/salida/**']
+  workflow_dispatch:
+concurrency:
+  group: notificaciones
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: datos
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node .github/enviar-notificaciones.js
+      - name: Limpiar enviadas
+        run: |
+          git config user.name "Notificaciones del portal"
+          git config user.email "notificaciones@users.noreply.github.com"
+          git add -A notif
+          git diff --cached --quiet || (git commit -m "Notificaciones enviadas" && git pull --rebase -q origin datos && git push origin HEAD:datos)
