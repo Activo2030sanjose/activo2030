@@ -391,6 +391,44 @@ table.tabla td{padding:10px 12px;border-bottom:1px solid var(--line);white-space
 .visor{width:100%;height:min(70vh,720px);border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:12px}
 .otra.bl{grid-template-columns:2.4fr .7fr 1fr 1fr 32px}
 @media (max-width:860px){.to-grid{grid-template-columns:1fr}.to-cal{grid-template-columns:1fr}}
+
+/* ---------- Colaboradores: estilo claro y cálido ---------- */
+.claro{--bg:#f6f7fb;--surface:#ffffff;--surface-2:#f1f3f9;--fg:#151a3b;--muted:#5f6584;--line:#e4e7f1;--link:#001489;--ok:#12804a;--ok-bg:#e3f5ea;--warn:#a35a00;--warn-bg:#fff2cf;--bad:#c0281c;--bad-bg:#fde6e3;
+  --shadow:0 1px 2px rgba(17,24,63,.05),0 14px 34px -16px rgba(17,24,63,.22);color-scheme:light;background:var(--bg);color:var(--fg)}
+body:has(.claro:not([hidden])){background:#f6f7fb}
+body:has(.claro:not([hidden])) .sheet,body:has(.claro:not([hidden])) .toast{--bg:#f6f7fb;--surface:#fff;--surface-2:#f1f3f9;--fg:#151a3b;--muted:#5f6584;--line:#e4e7f1;--bad:#c0281c;--bad-bg:#fde6e3;color-scheme:light}
+body:has(.claro:not([hidden])) .sheet{background:#fff;color:#151a3b}
+body:has(.claro:not([hidden])) .head{background:rgba(255,255,255,.92);color:#151a3b;border-bottom:1px solid #e4e7f1}
+body:has(.claro:not([hidden]))::before{background:#fff}
+body:has(.claro:not([hidden])) .head .chip{color:#151a3b;background:#f1f3f9;border-color:#e4e7f1}
+body:has(.claro:not([hidden])) .notice,body:has(.claro:not([hidden])) .a11y{--surface:#fff;--fg:#151a3b;--muted:#5f6584;--line:#e4e7f1;--surface-2:#f1f3f9;background:#fff;color:#151a3b}
+body:has(.claro:not([hidden])) footer{background:#fff;color:#5f6584;border-color:#e4e7f1}
+#v-colab.claro .band{background:linear-gradient(120deg,#fff9e0 0%,#ffece8 55%,#eef1ff 100%);color:#151a3b}
+#v-colab.claro .band canvas{display:none}#v-colab.claro .band .saw{opacity:.35}
+#v-colab.claro .m-hero .eyebrow{color:#da291c}#v-colab.claro .m-hero p{color:#5f6584;opacity:1}
+.claro .prc-bar{background:#fff;color:#151a3b;border-bottom:0;box-shadow:0 1px 0 #e4e7f1;position:relative}
+.claro .prc-bar::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:linear-gradient(90deg,#fedd00 0 20%,#da291c 20% 50%,#001489 50%)}
+.claro .prc-logo img{width:40px;height:40px}.claro .prc-logo b{color:#001489}.claro .prc-logo span{color:#da291c;border-color:#fedd00}
+.claro .prc-perfil .av{color:#fff}.claro .prc-perfil span{color:#5f6584;opacity:1}
+.claro .chip-l{color:#001489;border-color:#d6dbef;background:#f1f3f9}
+.prc-hero{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;padding:clamp(22px,4vw,34px);border-radius:24px;margin-bottom:26px;
+  background:radial-gradient(120% 140% at 100% 0%,#ffe2dd 0%,rgba(255,226,221,0) 55%),radial-gradient(90% 120% at 0% 100%,#fff3bf 0%,rgba(255,243,191,0) 60%),#fff;box-shadow:var(--shadow)}
+.prc-hero .eyebrow{color:#da291c}.prc-hero h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin:6px 0 4px}
+.prc-kpis{display:flex;gap:12px;flex-wrap:wrap}
+.prc-kpi{background:#fff;border:1px solid #eceef6;border-radius:18px;padding:14px 18px;min-width:150px}
+.prc-kpi small{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#5f6584;font-weight:900}
+.prc-kpi b{font-size:1.5rem;font-weight:900;color:#001489}
+.claro .tile{border:1px solid #eceef6}
+.claro .tile-top{height:118px;background:#fff6cc;color:#a77a00}
+.claro .tile:nth-child(4n+2) .tile-top{background:#ffe3df;color:#da291c}
+.claro .tile:nth-child(4n+3) .tile-top{background:#e6eaff;color:#001489}
+.claro .tile:nth-child(4n+4) .tile-top{background:#e3f5ea;color:#12804a}
+.claro .tile-top svg{width:58px;height:58px;padding:12px;border-radius:50%;background:#fff;box-shadow:0 8px 20px -10px rgba(17,24,63,.35);box-sizing:content-box}
+.claro .tile:hover{box-shadow:0 20px 40px -18px rgba(17,24,63,.35)}
+.claro .app{border-color:#eceef6}
+.claro .mes-t{color:#da291c}
+.claro .dias .d.sel{background:#da291c;border-color:#da291c;color:#fff}
+.claro .tabs button[aria-selected="true"]{border-bottom-color:#da291c}
 /* Panel lateral */
 .scrim{position:fixed;inset:0;background:rgba(0,10,71,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);z-index:20}
 .sheet{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--surface);z-index:21;overflow:auto;
@@ -618,26 +656,26 @@ footer img{width:34px;height:34px}
 </main>
 
 <!-- ============ COLABORADORES ============ -->
-<main id="v-colab" hidden>
+<main id="v-colab" class="claro" hidden>
   <section class="band"><canvas data-dots></canvas>
     <div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
     <div class="wrap m-hero"><span class="eyebrow">Mis aplicaciones</span><h1 id="col-hola">Colaboradores</h1><p id="col-sub"></p></div>
   </section>
   <div class="wrap lift"><div class="apps" id="col-apps"></div></div>
 </main>
-<main id="v-prc" hidden>
-  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><div class="prc-perfil" id="prc-perfil"></div></div></section>
-  <div class="wrap prc-body"><h2 class="prc-h">Mis gestiones</h2><p class="muted" id="prc-pend"></p><div class="tiles" id="prc-tiles"></div></div>
+<main id="v-prc" class="claro" hidden>
+  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><div class="prc-perfil" id="prc-perfil"></div></div></section>
+  <div class="wrap prc-body"><section class="prc-hero"><div><span class="eyebrow">People Resource Center</span><h2 id="prc-hola">Hola</h2><p class="muted" id="prc-pend"></p></div><div class="prc-kpis" id="prc-kpis"></div></section><h2 class="prc-h">Mis gestiones</h2><div class="tiles" id="prc-tiles"></div></div>
 </main>
-<main id="v-timeoff" hidden>
-  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div></section>
+<main id="v-timeoff" class="claro" hidden>
+  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div></section>
   <div class="wrap prc-body"><div class="card to-card"><div class="to-head"><h2>Tiempo libre</h2><button class="btn btn-red" id="to-crear" style="padding:.6rem 1.2rem">Crear ausencia</button></div>
     <div class="to-grid"><div><div class="to-nav"><button class="mini" id="to-prev" aria-label="Meses anteriores">‹</button><button class="mini" id="to-next" aria-label="Meses siguientes">›</button></div><p class="to-tip">Arrastrá sobre el calendario desde la fecha de inicio hasta la de finalización, o tocá las dos fechas.</p><div class="to-cal" id="to-cal"></div>
       <div class="ley"><span><i class="lh"></i>Hoy</span><span><i class="ll"></i>Día laborable</span><span><i class="ln"></i>Día no laborable</span><span><i class="la"></i>Aprobado</span><span><i class="lp"></i>Pendiente</span><span><i class="lf"></i>Feriado</span></div></div>
       <aside class="to-side" id="to-side"></aside></div></div></div>
 </main>
-<main id="v-payroll" hidden>
-  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div></section>
+<main id="v-payroll" class="claro" hidden>
+  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div></section>
   <div class="wrap prc-body"><div class="card"><nav class="tabs" id="pay-tabs"><button data-pay="boletas">Boleta de pago</button><button data-pay="cartas">Cartas</button><button data-pay="horas">Horas extra</button></nav><div class="pad-x pay" id="pay-cont"></div></div></div>
 </main>
 <main id="v-rh" hidden>
