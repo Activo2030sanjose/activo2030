@@ -82,18 +82,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* Banda */
 .band{position:relative;color:#fff;overflow:hidden;background:radial-gradient(45% 70% at 95% 0%,rgba(254,221,0,.28) 0,rgba(254,221,0,0) 70%),radial-gradient(120% 140% at 85% -10%,var(--band-a) 0%,var(--band-b) 70%)}
-.deco{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
-.d{position:absolute;width:var(--w);height:auto;transform:translate(-50%,-50%) rotate(var(--r));animation:dFlota 7s ease-in-out infinite}
-.d-aro{aspect-ratio:200/160;filter:drop-shadow(0 18px 22px rgba(0,6,50,.4))}
-.d-esf{aspect-ratio:1;border-radius:50%;box-shadow:0 22px 30px -8px rgba(0,6,50,.5)}
-.esf-r{background:radial-gradient(circle at 32% 28%,#fff 0,#ffc2bb 14%,#f2584a 38%,#da291c 66%,#8f1209 100%)}
-.esf-a{background:radial-gradient(circle at 32% 28%,#fff 0,#fff6b0 14%,#ffe94d 38%,#fedd00 62%,#e0a800 100%)}
-.esf-z{background:radial-gradient(circle at 32% 28%,#fff 0,#c9d3ff 14%,#6c84ff 38%,#2a46ff 66%,#001489 100%)}
-.d-chispa{aspect-ratio:1;fill:#fff;filter:drop-shadow(0 0 10px rgba(255,255,255,.7));animation-name:dBrilla;animation-duration:3.2s}
-.chispa-a{fill:#fedd00;filter:drop-shadow(0 0 8px rgba(254,221,0,.7))}
-@keyframes dFlota{50%{transform:translate(-50%,calc(-50% - 12px)) rotate(calc(var(--r) + 4deg))}}
-@keyframes dBrilla{50%{transform:translate(-50%,-50%) rotate(var(--r)) scale(.78);opacity:.75}}
-@media (max-width:700px){.solo-pc{display:none}.d{width:calc(var(--w)*.6)}}
 
 .band canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .band .wrap{position:relative}
@@ -875,11 +863,11 @@ footer img{width:34px;height:34px}
 <div class="scrim" id="scrim" hidden></div>
 <aside class="sheet" id="sheet" hidden aria-modal="true" role="dialog"></aside>
 <div class="toast" id="toast" hidden role="status"></div>
-<script src="../lib/estado-cuenta.js?v=1793520075"></script>
-<script src="../lib/almacen.js?v=1793520075"></script>
-<script src="../lib/operaciones.js?v=1793520075"></script>
-<script src="../lib/rh.js?v=1793520075"></script>
-<script src="../lib/portal.js?v=1793520075"></script>
+<script src="../lib/estado-cuenta.js?v=1793520223"></script>
+<script src="../lib/almacen.js?v=1793520223"></script>
+<script src="../lib/operaciones.js?v=1793520223"></script>
+<script src="../lib/rh.js?v=1793520223"></script>
+<script src="../lib/portal.js?v=1793520223"></script>
 
 </body>
 </html>
