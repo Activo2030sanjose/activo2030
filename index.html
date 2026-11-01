@@ -75,7 +75,7 @@ footer div{max-width:1000px;margin:0 auto;display:flex;justify-content:space-bet
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
-<body data-deco="grande">
+<body>
 <canvas id="dots" aria-hidden="true"></canvas>
 <div class="saw" aria-hidden="true"><img src="img/sierra.png" alt=""></div>
 <main>
@@ -113,6 +113,5 @@ footer div{max-width:1000px;margin:0 auto;display:flex;justify-content:space-bet
   size();addEventListener('resize',function(){size();draw(performance.now())});
   (function loop(t){draw(t||0);if(!still)requestAnimationFrame(loop)})();})();
 </script>
-<script src="lib/deco.js"></script>
 </body>
 </html>
