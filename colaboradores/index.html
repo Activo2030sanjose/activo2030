@@ -351,6 +351,9 @@ table.ed .input{padding:.4rem .5rem;font-size:.8125rem}
 .apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
 .app{display:flex;flex-direction:column;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 18px;cursor:pointer;box-shadow:var(--shadow);text-align:center;color:var(--fg);transition:transform .15s}
 .app:hover{transform:translateY(-3px)}
+.app{position:relative}.app.pronto{cursor:default;opacity:.75}.app.pronto:hover{transform:none}.app-badge{position:absolute;top:12px;right:12px;background:var(--amarillo);color:#000a47;font-size:.65rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 9px}
+.h-back{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;display:grid;place-items:center;cursor:pointer}.h-back:hover{background:rgba(255,255,255,.28)}
+#h-logo.link{cursor:pointer}.h-back[hidden]{display:none}
 .app-ico{width:150px;height:84px;display:grid;place-items:center;color:var(--azul)}
 .app-ico.prc{display:flex;flex-direction:column;justify-content:center;line-height:1;color:var(--rojo)}
 .app-ico.prc b{font-weight:300;font-size:2.1rem;letter-spacing:.04em}.app-ico.prc small{font-size:.62rem;letter-spacing:.18em;color:var(--azul);font-weight:900;margin-top:4px}
@@ -575,7 +578,8 @@ footer img{width:34px;height:34px}
 <body>
 <header class="head">
   <div class="wrap">
-    <img src="../img/logo-color.png" alt="Activo 20-30 Internacional San José #532">
+    <button type="button" id="h-back" class="h-back" hidden aria-label="Volver a la pantalla anterior" title="Volver"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <img id="h-logo" src="../img/logo-color.png" alt="Activo 20-30 Internacional San José #532">
     <div class="brand"><small>Activo 20-30 San José #532</small><strong id="h-title">Estados de cuenta</strong></div>
     <div class="prc-marca prc-head"><svg class="prc-ico" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gprc2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5bff"/><stop offset="1" stop-color="#001489"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#gprc2)"/><circle cx="14.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="33.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="24" cy="15.5" r="5.4" fill="#fedd00"/><path d="M7.5 34c0-4.7 3.2-7.6 7-7.6 2 0 3.7.8 4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M40.5 34c0-4.7-3.2-7.6-7-7.6-2 0-3.7.8-4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M14.5 37c0-6 4.2-9.6 9.5-9.6s9.5 3.6 9.5 9.6" stroke="#fedd00" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><div class="prc-txt"><b>People</b><span>Resource Center</span></div></div>
     <div class="sp"></div>
@@ -854,11 +858,11 @@ footer img{width:34px;height:34px}
 <div class="scrim" id="scrim" hidden></div>
 <aside class="sheet" id="sheet" hidden aria-modal="true" role="dialog"></aside>
 <div class="toast" id="toast" hidden role="status"></div>
-<script src="../lib/estado-cuenta.js?v=1793508511"></script>
-<script src="../lib/almacen.js?v=1793508511"></script>
-<script src="../lib/operaciones.js?v=1793508511"></script>
-<script src="../lib/rh.js?v=1793508511"></script>
-<script src="../lib/portal.js?v=1793508511"></script>
+<script src="../lib/estado-cuenta.js?v=1793511518"></script>
+<script src="../lib/almacen.js?v=1793511518"></script>
+<script src="../lib/operaciones.js?v=1793511518"></script>
+<script src="../lib/rh.js?v=1793511518"></script>
+<script src="../lib/portal.js?v=1793511518"></script>
 
 </body>
 </html>
