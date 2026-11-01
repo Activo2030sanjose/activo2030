@@ -521,7 +521,7 @@ footer img{width:34px;height:34px}
       </nav>
       <section class="a-panel" id="p-socios">
         <div class="tools"><h2>Socios</h2>
-          <div class="seg" role="group" aria-label="Filtrar" id="a-filtro"><button aria-pressed="true" data-f="activos">Activos</button><button aria-pressed="false" data-f="incobrable">Incobrables</button><button aria-pressed="false" data-f="todos">Todos</button></div>
+          <div class="seg" role="group" aria-label="Filtrar" id="a-filtro"><button aria-pressed="true" data-f="activos">Activos</button><button aria-pressed="false" data-f="juvenil">Juveniles</button><button aria-pressed="false" data-f="incobrable">Incobrables</button><button aria-pressed="false" data-f="todos">Todos</button></div>
           <input class="search" id="a-q" type="search" placeholder="Buscar socio" aria-label="Buscar socio">
           <button class="btn btn-blue" id="a-new" style="padding:.6rem 1.1rem">+ Nuevo socio</button></div>
         <ul class="list" id="a-rows"></ul>
@@ -539,6 +539,8 @@ footer img{width:34px;height:34px}
           <div class="field"><label for="dl-socio">Socio</label><select class="input" id="dl-socio"></select></div></div>
         <label class="chk" style="margin-top:10px"><input type="checkbox" id="dl-inc" checked> Incluir incobrables en el general</label>
         <div class="foot" style="margin-top:14px;justify-content:flex-start"><button class="btn btn-red" id="dl-pdf">Descargar PDF</button><button class="btn btn-blue" id="dl-xls">Descargar Excel</button></div>
+        <h2 style="margin-top:26px">Socios juveniles</h2><p class="muted">No tienen estado de cuenta. Este reporte muestra lo que han aportado.</p>
+        <div class="foot" style="justify-content:flex-start"><button class="btn btn-soft" id="dl-juv">Reporte de aportes (PDF)</button></div>
       </section>
       <section class="a-panel pad" id="p-montos" hidden><div id="mon-form"></div></section>
       <section class="a-panel" id="p-usuarios" hidden>
