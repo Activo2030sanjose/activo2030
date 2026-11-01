@@ -377,6 +377,9 @@ table.ed .input{padding:.4rem .5rem;font-size:.8125rem}
 .dias .d.nl{background:var(--surface-2);color:var(--muted)}.dias .d.hoy{border-color:var(--azul);font-weight:900}
 .dias .d.apr::after,.dias .d.pen::after{content:"";position:absolute;left:4px;right:4px;bottom:2px;height:3px;border-radius:2px;background:var(--ok)}.dias .d.pen::after{background:#c25e00}
 .dias .d.fer{background:var(--fg);color:var(--bg)}
+.to-cal{touch-action:none;user-select:none;-webkit-user-select:none}.dias .d{cursor:pointer}.dias .d.pas{opacity:.45;cursor:default}
+.dias .d.sel{background:var(--rojo);color:#fff;border-color:var(--rojo)}
+.to-tip{font-size:.8125rem;color:var(--muted);margin:0 0 8px}
 .ley{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;font-size:.75rem;color:var(--muted)}.ley i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-2px;border:1px solid var(--line)}
 .ley .lh{border:2px solid var(--azul)}.ley .ln{background:var(--surface-2)}.ley .la{background:var(--ok)}.ley .lp{background:#c25e00}.ley .lf{background:var(--fg)}
 .to-side h3{font-size:1rem;border-bottom:1px solid var(--line);padding-bottom:8px;margin:14px 0 10px}
@@ -628,7 +631,7 @@ footer img{width:34px;height:34px}
 <main id="v-timeoff" hidden>
   <section class="prc-bar"><div class="wrap"><div class="prc-logo"><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div></section>
   <div class="wrap prc-body"><div class="card to-card"><div class="to-head"><h2>Tiempo libre</h2><button class="btn btn-red" id="to-crear" style="padding:.6rem 1.2rem">Crear ausencia</button></div>
-    <div class="to-grid"><div><div class="to-nav"><button class="mini" id="to-prev" aria-label="Meses anteriores">‹</button><button class="mini" id="to-next" aria-label="Meses siguientes">›</button></div><div class="to-cal" id="to-cal"></div>
+    <div class="to-grid"><div><div class="to-nav"><button class="mini" id="to-prev" aria-label="Meses anteriores">‹</button><button class="mini" id="to-next" aria-label="Meses siguientes">›</button></div><p class="to-tip">Arrastrá sobre el calendario desde la fecha de inicio hasta la de finalización, o tocá las dos fechas.</p><div class="to-cal" id="to-cal"></div>
       <div class="ley"><span><i class="lh"></i>Hoy</span><span><i class="ll"></i>Día laborable</span><span><i class="ln"></i>Día no laborable</span><span><i class="la"></i>Aprobado</span><span><i class="lp"></i>Pendiente</span><span><i class="lf"></i>Feriado</span></div></div>
       <aside class="to-side" id="to-side"></aside></div></div></div>
 </main>
