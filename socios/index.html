@@ -482,6 +482,13 @@ body:has(.azul:not([hidden])) footer{background:#050c3a;color:#a9b1dc;border-col
 .app-ico.prc .prc-ico{width:70px;height:70px}
 .azul .app-ico{color:#fedd00;height:auto;gap:8px}.azul .app-ico.prc small{color:#fedd00;letter-spacing:.16em;font-size:.62rem;font-weight:900}
 .azul .app-t{color:#fff}
+
+.prc-head{display:none}
+body:has(#v-prc:not([hidden]),#v-timeoff:not([hidden]),#v-payroll:not([hidden])) .head .brand,body:has(#v-prc:not([hidden]),#v-timeoff:not([hidden]),#v-payroll:not([hidden])) .head>.wrap>img{display:none}
+body:has(#v-prc:not([hidden]),#v-timeoff:not([hidden]),#v-payroll:not([hidden])) .prc-head{display:flex}
+.prc-head .prc-ico{width:38px;height:38px}.prc-head .prc-txt b{font-size:1.25rem}.prc-head .prc-txt span{font-size:.58rem;letter-spacing:.2em}
+#h-user{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+@media (max-width:560px){.head .wrap{flex-wrap:wrap;row-gap:8px}.head .sp{display:none}#h-user{width:100%;justify-content:flex-start}.head .chip{padding:5px 10px;font-size:.75rem}.head .chip .lbl{display:inline}.poster-top{margin-bottom:12px}.poster-in{padding-top:14px}}
 /* Panel lateral */
 .scrim{position:fixed;inset:0;background:rgba(0,10,71,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);z-index:20}
 .sheet{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--surface);z-index:21;overflow:auto;
@@ -560,6 +567,7 @@ footer img{width:34px;height:34px}
   <div class="wrap">
     <img src="../img/logo-color.png" alt="Activo 20-30 Internacional San José #532">
     <div class="brand"><small>Activo 20-30 San José #532</small><strong id="h-title">Estados de cuenta</strong></div>
+    <div class="prc-marca prc-head"><svg class="prc-ico" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gprc2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5bff"/><stop offset="1" stop-color="#001489"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#gprc2)"/><circle cx="14.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="33.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="24" cy="15.5" r="5.4" fill="#fedd00"/><path d="M7.5 34c0-4.7 3.2-7.6 7-7.6 2 0 3.7.8 4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M40.5 34c0-4.7-3.2-7.6-7-7.6-2 0-3.7.8-4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M14.5 37c0-6 4.2-9.6 9.5-9.6s9.5 3.6 9.5 9.6" stroke="#fedd00" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><div class="prc-txt"><b>People</b><span>Resource Center</span></div></div>
     <div class="sp"></div>
     <span id="h-user"></span>
   </div>
@@ -713,14 +721,14 @@ footer img{width:34px;height:34px}
 </main>
 <main id="v-prc" class="azul" hidden>
   <section class="poster"><canvas data-dots></canvas><div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
-    <div class="wrap poster-in"><div class="poster-top"><div class="prc-marca"><svg class="prc-ico" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gprc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5bff"/><stop offset="1" stop-color="#001489"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#gprc)"/><circle cx="14.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="33.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="24" cy="15.5" r="5.4" fill="#fedd00"/><path d="M7.5 34c0-4.7 3.2-7.6 7-7.6 2 0 3.7.8 4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M40.5 34c0-4.7-3.2-7.6-7-7.6-2 0-3.7.8-4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M14.5 37c0-6 4.2-9.6 9.5-9.6s9.5 3.6 9.5 9.6" stroke="#fedd00" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><div class="prc-txt"><b>People</b><span>Resource Center</span></div></div><div class="prc-perfil" id="prc-perfil"></div></div>
+    <div class="wrap poster-in"><div class="poster-top"><div class="prc-perfil" id="prc-perfil"></div></div>
       <div class="poster-grid"><div><span class="eyebrow">People Resource Center</span><h1 class="poster-h" id="prc-hola">¡Hola!</h1><p class="poster-p" id="prc-pend"></p></div><div class="prc-kpis" id="prc-kpis"></div></div></div>
   </section>
   <div class="wrap sube prc-body"><h2 class="prc-h"><span>Mis gestiones</span></h2><div class="tiles" id="prc-tiles"></div></div>
 </main>
 <main id="v-timeoff" class="azul" hidden>
   <section class="poster mini"><canvas data-dots></canvas><div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
-    <div class="wrap poster-in"><div class="poster-top"><div class="prc-marca"><svg class="prc-ico" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gprc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5bff"/><stop offset="1" stop-color="#001489"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#gprc)"/><circle cx="14.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="33.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="24" cy="15.5" r="5.4" fill="#fedd00"/><path d="M7.5 34c0-4.7 3.2-7.6 7-7.6 2 0 3.7.8 4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M40.5 34c0-4.7-3.2-7.6-7-7.6-2 0-3.7.8-4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M14.5 37c0-6 4.2-9.6 9.5-9.6s9.5 3.6 9.5 9.6" stroke="#fedd00" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><div class="prc-txt"><b>People</b><span>Resource Center</span></div></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Tiempo <em>libre</em></h1></div>
+    <div class="wrap poster-in"><div class="poster-top"><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Tiempo <em>libre</em></h1></div>
   </section>
   <div class="wrap sube prc-body"><div class="card to-card"><div class="to-head"><h2>Calendario</h2><button class="btn btn-red" id="to-crear" style="padding:.6rem 1.2rem">Crear ausencia</button></div>
     <div class="to-grid"><div><div class="to-nav"><button class="mini" id="to-prev" aria-label="Meses anteriores">‹</button><button class="mini" id="to-next" aria-label="Meses siguientes">›</button></div><p class="to-tip">Arrastrá sobre el calendario desde la fecha de inicio hasta la de finalización, o tocá las dos fechas.</p><div class="to-cal" id="to-cal"></div>
@@ -729,7 +737,7 @@ footer img{width:34px;height:34px}
 </main>
 <main id="v-payroll" class="azul" hidden>
   <section class="poster mini"><canvas data-dots></canvas><div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
-    <div class="wrap poster-in"><div class="poster-top"><div class="prc-marca"><svg class="prc-ico" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gprc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5bff"/><stop offset="1" stop-color="#001489"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#gprc)"/><circle cx="14.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="33.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="24" cy="15.5" r="5.4" fill="#fedd00"/><path d="M7.5 34c0-4.7 3.2-7.6 7-7.6 2 0 3.7.8 4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M40.5 34c0-4.7-3.2-7.6-7-7.6-2 0-3.7.8-4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M14.5 37c0-6 4.2-9.6 9.5-9.6s9.5 3.6 9.5 9.6" stroke="#fedd00" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><div class="prc-txt"><b>People</b><span>Resource Center</span></div></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Pay<em>roll</em></h1></div>
+    <div class="wrap poster-in"><div class="poster-top"><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Pay<em>roll</em></h1></div>
   </section>
   <div class="wrap sube prc-body"><div class="card"><nav class="tabs" id="pay-tabs"><button data-pay="boletas">Boleta de pago</button><button data-pay="cartas">Cartas</button><button data-pay="horas">Horas extra</button></nav><div class="pad-x pay" id="pay-cont"></div></div></div>
 </main>
@@ -836,11 +844,11 @@ footer img{width:34px;height:34px}
 <div class="scrim" id="scrim" hidden></div>
 <aside class="sheet" id="sheet" hidden aria-modal="true" role="dialog"></aside>
 <div class="toast" id="toast" hidden role="status"></div>
-<script src="../lib/estado-cuenta.js"></script>
-<script src="../lib/almacen.js"></script>
-<script src="../lib/operaciones.js"></script>
-<script src="../lib/rh.js"></script>
-<script src="../lib/portal.js"></script>
+<script src="../lib/estado-cuenta.js?v=1793508279"></script>
+<script src="../lib/almacen.js?v=1793508279"></script>
+<script src="../lib/operaciones.js?v=1793508279"></script>
+<script src="../lib/rh.js?v=1793508279"></script>
+<script src="../lib/portal.js?v=1793508279"></script>
 
 </body>
 </html>
