@@ -429,6 +429,54 @@ body:has(.claro:not([hidden])) footer{background:#fff;color:#5f6584;border-color
 .claro .mes-t{color:#da291c}
 .claro .dias .d.sel{background:#da291c;border-color:#da291c;color:#fff}
 .claro .tabs button[aria-selected="true"]{border-bottom-color:#da291c}
+
+/* ---------- Colaboradores: estilo cartel (inspirado en teletoncr.com, colores Activo 20-30) ---------- */
+.poster{position:relative;overflow:hidden;color:#fff;background:radial-gradient(90% 120% at 85% 0%,#1f3be0 0%,rgba(31,59,224,0) 55%),radial-gradient(80% 110% at 0% 100%,#0b1a8f 0%,rgba(11,26,143,0) 60%),linear-gradient(160deg,#001489 0%,#000a47 100%)}
+.poster canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.poster-in{position:relative;z-index:2;padding-block:clamp(22px,3.5vw,34px) clamp(110px,12vw,140px)}
+.poster.mini .poster-in{padding-block:20px 104px}
+.poster-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:clamp(18px,3vw,30px)}
+.poster .prc-logo b{color:#fff}.poster .prc-logo span{color:#fedd00;border-color:#fedd00}.poster .prc-logo img{width:44px;height:44px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.poster .prc-perfil{color:#fff}.poster .prc-perfil span{color:rgba(255,255,255,.75)}
+.poster .chip-l{color:#fff;border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.08);backdrop-filter:blur(6px)}
+.poster .eyebrow{color:#fedd00;display:inline-flex;gap:10px;align-items:center}.poster .eyebrow::before{content:"";width:26px;height:3px;border-radius:2px;background:#fedd00}
+.poster-h{font-weight:900;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1;letter-spacing:-.02em;margin:10px 0 10px;text-wrap:balance}
+.poster-h.sm{font-size:clamp(2rem,5vw,3.2rem);margin:0}
+.poster-h em{font-style:normal;color:#fedd00;position:relative}
+.poster-p{color:rgba(255,255,255,.82);font-size:1.05rem;margin:0}
+.poster-grid{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;flex-wrap:wrap}
+.poster .prc-kpi{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;border-radius:20px}
+.poster .prc-kpi small{color:rgba(255,255,255,.75)}.poster .prc-kpi b{color:#fedd00;font-size:1.7rem}
+.deco{position:absolute;inset:0;pointer-events:none;z-index:1}
+.esf{position:absolute;border-radius:50%;animation:flota 7s ease-in-out infinite}
+.esf.amarilla{width:150px;height:150px;right:40%;top:-62px;background:radial-gradient(circle at 32% 28%,#fff6b0 0%,#fedd00 38%,#e3a800 75%,#b37f00 100%);box-shadow:0 30px 50px -20px rgba(0,0,0,.5)}
+.esf.roja{width:70px;height:70px;right:4%;bottom:118px;background:radial-gradient(circle at 32% 28%,#ff9d92 0%,#da291c 45%,#9c160c 100%);animation-delay:-2.5s;box-shadow:0 18px 30px -14px rgba(0,0,0,.55)}
+.esf.blanca{width:30px;height:30px;left:34%;bottom:120px;background:radial-gradient(circle at 32% 28%,#fff 0%,#dfe5ff 55%,#9aa8ef 100%);animation-delay:-4s}
+.anillo{position:absolute;width:260px;height:260px;right:-60px;bottom:-130px;border-radius:50%;border:22px solid rgba(254,221,0,.9);opacity:.9}
+.anillo.dos{width:120px;height:120px;left:-40px;top:30%;border:10px solid rgba(218,41,28,.85);opacity:.8}
+.chispa{position:absolute;color:#fedd00;width:26px;height:26px;animation:brilla 3.2s ease-in-out infinite}.chispa svg{width:100%;height:100%;display:block}
+.chispa.c1{right:24%;top:30px}.chispa.c2{right:4%;top:56%;width:18px;height:18px;color:#fff;animation-delay:-1.2s}.chispa.c3{left:38%;bottom:60px;width:16px;height:16px;color:#ff8a7e;animation-delay:-2s}
+.sierra-deco{position:absolute;width:420px;height:420px;left:-150px;top:-170px;opacity:.12;animation:spin 90s linear infinite}
+.poster.mini .esf.amarilla{width:110px;height:110px}.poster.mini .anillo{width:200px;height:200px;bottom:-120px}
+@keyframes flota{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes brilla{0%,100%{transform:scale(1) rotate(0);opacity:1}50%{transform:scale(.6) rotate(25deg);opacity:.6}}
+.sube{position:relative;z-index:3;margin-top:-86px}
+.claro .prc-h{display:flex;align-items:center;gap:12px;font-size:1.5rem;margin:0 0 4px;color:#fff}
+.claro .prc-h span{background:#fff;color:#151a3b;padding:8px 18px;border-radius:999px;box-shadow:var(--shadow)}
+.claro .tiles{margin-top:18px}
+.claro .tile{border:0;border-radius:26px;box-shadow:0 2px 4px rgba(0,10,71,.06),0 24px 44px -24px rgba(0,10,71,.45);background:#fff;overflow:visible}
+.claro .tile-top{height:auto;background:none!important;display:block;padding:22px 22px 0}
+.claro .tile-top svg{width:30px;height:30px;padding:16px;border-radius:20px;color:#fff;background:linear-gradient(135deg,#ffe766,#f5b800);box-shadow:0 12px 24px -10px rgba(245,184,0,.8)}
+.claro .tile:nth-child(4n+2) .tile-top svg{background:linear-gradient(135deg,#ff6d5e,#c41d11);box-shadow:0 12px 24px -10px rgba(218,41,28,.7)}
+.claro .tile:nth-child(4n+3) .tile-top svg{background:linear-gradient(135deg,#3d5bff,#001489);box-shadow:0 12px 24px -10px rgba(0,20,137,.7)}
+.claro .tile:nth-child(4n+4) .tile-top svg{background:linear-gradient(135deg,#1a2a8a,#000a47);box-shadow:0 12px 24px -10px rgba(0,10,71,.7)}
+.claro .tile-b{padding:16px 22px 22px}.claro .tile-b small{display:block}.claro .tile-b b{font-size:1.2rem;font-weight:900}
+.claro .tile-b::after{content:"Entrar →";display:block;margin-top:12px;font-weight:900;font-size:.85rem;color:#da291c}
+.claro .tile:hover{transform:translateY(-6px) rotate(-.4deg)}
+.claro .app{border:0;border-radius:26px;box-shadow:0 2px 4px rgba(0,10,71,.06),0 24px 44px -24px rgba(0,10,71,.45)}
+.claro .to-card,.claro .sube>.card{border:0;border-radius:26px;box-shadow:0 2px 4px rgba(0,10,71,.06),0 24px 44px -24px rgba(0,10,71,.45)}
+@media (max-width:640px){.esf.amarilla{width:90px;height:90px;right:-24px;top:-30px}.esf.roja{display:none}.anillo{width:170px;height:170px;border-width:14px}.poster-grid{align-items:flex-start}}
+@media (prefers-reduced-motion:reduce){.esf,.chispa,.sierra-deco{animation:none}}
 /* Panel lateral */
 .scrim{position:fixed;inset:0;background:rgba(0,10,71,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);z-index:20}
 .sheet{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--surface);z-index:21;overflow:auto;
@@ -657,26 +705,32 @@ footer img{width:34px;height:34px}
 
 <!-- ============ COLABORADORES ============ -->
 <main id="v-colab" class="claro" hidden>
-  <section class="band"><canvas data-dots></canvas>
-    <div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
-    <div class="wrap m-hero"><span class="eyebrow">Mis aplicaciones</span><h1 id="col-hola">Colaboradores</h1><p id="col-sub"></p></div>
+  <section class="poster"><canvas data-dots></canvas><div class="deco" aria-hidden="true"><i class="esf amarilla"></i><i class="esf roja"></i><i class="esf blanca"></i><i class="anillo"></i><i class="anillo dos"></i><span class="chispa c1"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c2"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c3"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><img class="sierra-deco" src="../img/sierra.png" alt=""></div>
+    <div class="wrap poster-in"><span class="eyebrow">Mis aplicaciones</span><h1 class="poster-h" id="col-hola">Colaboradores</h1><p class="poster-p" id="col-sub"></p></div>
   </section>
-  <div class="wrap lift"><div class="apps" id="col-apps"></div></div>
+  <div class="wrap sube"><div class="apps" id="col-apps"></div></div>
 </main>
 <main id="v-prc" class="claro" hidden>
-  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><div class="prc-perfil" id="prc-perfil"></div></div></section>
-  <div class="wrap prc-body"><section class="prc-hero"><div><span class="eyebrow">People Resource Center</span><h2 id="prc-hola">Hola</h2><p class="muted" id="prc-pend"></p></div><div class="prc-kpis" id="prc-kpis"></div></section><h2 class="prc-h">Mis gestiones</h2><div class="tiles" id="prc-tiles"></div></div>
+  <section class="poster"><canvas data-dots></canvas><div class="deco" aria-hidden="true"><i class="esf amarilla"></i><i class="esf roja"></i><i class="esf blanca"></i><i class="anillo"></i><i class="anillo dos"></i><span class="chispa c1"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c2"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c3"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><img class="sierra-deco" src="../img/sierra.png" alt=""></div>
+    <div class="wrap poster-in"><div class="poster-top"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><div class="prc-perfil" id="prc-perfil"></div></div>
+      <div class="poster-grid"><div><span class="eyebrow">People Resource Center</span><h1 class="poster-h" id="prc-hola">¡Hola!</h1><p class="poster-p" id="prc-pend"></p></div><div class="prc-kpis" id="prc-kpis"></div></div></div>
+  </section>
+  <div class="wrap sube prc-body"><h2 class="prc-h"><span>Mis gestiones</span></h2><div class="tiles" id="prc-tiles"></div></div>
 </main>
 <main id="v-timeoff" class="claro" hidden>
-  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div></section>
-  <div class="wrap prc-body"><div class="card to-card"><div class="to-head"><h2>Tiempo libre</h2><button class="btn btn-red" id="to-crear" style="padding:.6rem 1.2rem">Crear ausencia</button></div>
+  <section class="poster mini"><canvas data-dots></canvas><div class="deco" aria-hidden="true"><i class="esf amarilla"></i><i class="esf roja"></i><i class="esf blanca"></i><i class="anillo"></i><i class="anillo dos"></i><span class="chispa c1"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c2"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c3"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><img class="sierra-deco" src="../img/sierra.png" alt=""></div>
+    <div class="wrap poster-in"><div class="poster-top"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Tiempo <em>libre</em></h1></div>
+  </section>
+  <div class="wrap sube prc-body"><div class="card to-card"><div class="to-head"><h2>Calendario</h2><button class="btn btn-red" id="to-crear" style="padding:.6rem 1.2rem">Crear ausencia</button></div>
     <div class="to-grid"><div><div class="to-nav"><button class="mini" id="to-prev" aria-label="Meses anteriores">‹</button><button class="mini" id="to-next" aria-label="Meses siguientes">›</button></div><p class="to-tip">Arrastrá sobre el calendario desde la fecha de inicio hasta la de finalización, o tocá las dos fechas.</p><div class="to-cal" id="to-cal"></div>
       <div class="ley"><span><i class="lh"></i>Hoy</span><span><i class="ll"></i>Día laborable</span><span><i class="ln"></i>Día no laborable</span><span><i class="la"></i>Aprobado</span><span><i class="lp"></i>Pendiente</span><span><i class="lf"></i>Feriado</span></div></div>
       <aside class="to-side" id="to-side"></aside></div></div></div>
 </main>
 <main id="v-payroll" class="claro" hidden>
-  <section class="prc-bar"><div class="wrap"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div></section>
-  <div class="wrap prc-body"><div class="card"><nav class="tabs" id="pay-tabs"><button data-pay="boletas">Boleta de pago</button><button data-pay="cartas">Cartas</button><button data-pay="horas">Horas extra</button></nav><div class="pad-x pay" id="pay-cont"></div></div></div>
+  <section class="poster mini"><canvas data-dots></canvas><div class="deco" aria-hidden="true"><i class="esf amarilla"></i><i class="esf roja"></i><i class="esf blanca"></i><i class="anillo"></i><i class="anillo dos"></i><span class="chispa c1"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c2"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c3"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><img class="sierra-deco" src="../img/sierra.png" alt=""></div>
+    <div class="wrap poster-in"><div class="poster-top"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Pay<em>roll</em></h1></div>
+  </section>
+  <div class="wrap sube prc-body"><div class="card"><nav class="tabs" id="pay-tabs"><button data-pay="boletas">Boleta de pago</button><button data-pay="cartas">Cartas</button><button data-pay="horas">Horas extra</button></nav><div class="pad-x pay" id="pay-cont"></div></div></div>
 </main>
 <main id="v-rh" hidden>
   <section class="band"><canvas data-dots></canvas>
