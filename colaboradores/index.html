@@ -392,24 +392,24 @@ table.tabla td{padding:10px 12px;border-bottom:1px solid var(--line);white-space
 @media (max-width:860px){.to-grid{grid-template-columns:1fr}.to-cal{grid-template-columns:1fr}}
 
 /* ---------- Colaboradores: estilo claro y cálido ---------- */
-.claro{--bg:#f6f7fb;--surface:#ffffff;--surface-2:#f1f3f9;--fg:#151a3b;--muted:#5f6584;--line:#e4e7f1;--link:#001489;--ok:#12804a;--ok-bg:#e3f5ea;--warn:#a35a00;--warn-bg:#fff2cf;--bad:#c0281c;--bad-bg:#fde6e3;
-  --shadow:0 1px 2px rgba(17,24,63,.05),0 14px 34px -16px rgba(17,24,63,.22);color-scheme:light;background:var(--bg);color:var(--fg)}
-body:has(.claro:not([hidden])){background:#f6f7fb}
-body:has(.claro:not([hidden])) .sheet,body:has(.claro:not([hidden])) .toast{--bg:#f6f7fb;--surface:#fff;--surface-2:#f1f3f9;--fg:#151a3b;--muted:#5f6584;--line:#e4e7f1;--bad:#c0281c;--bad-bg:#fde6e3;color-scheme:light}
-body:has(.claro:not([hidden])) .sheet{background:#fff;color:#151a3b}
-body:has(.claro:not([hidden])) .head{background:rgba(255,255,255,.92);color:#151a3b;border-bottom:1px solid #e4e7f1}
-body:has(.claro:not([hidden]))::before{background:#fff}
-body:has(.claro:not([hidden])) .head .chip{color:#151a3b;background:#f1f3f9;border-color:#e4e7f1}
-body:has(.claro:not([hidden])) .notice,body:has(.claro:not([hidden])) .a11y{--surface:#fff;--fg:#151a3b;--muted:#5f6584;--line:#e4e7f1;--surface-2:#f1f3f9;background:#fff;color:#151a3b}
-body:has(.claro:not([hidden])) footer{background:#fff;color:#5f6584;border-color:#e4e7f1}
-#v-colab.claro .band{background:linear-gradient(120deg,#fff9e0 0%,#ffece8 55%,#eef1ff 100%);color:#151a3b}
-#v-colab.claro .band canvas{display:none}#v-colab.claro .band .saw{opacity:.35}
-#v-colab.claro .m-hero .eyebrow{color:#da291c}#v-colab.claro .m-hero p{color:#5f6584;opacity:1}
-.claro .prc-bar{background:#fff;color:#151a3b;border-bottom:0;box-shadow:0 1px 0 #e4e7f1;position:relative}
-.claro .prc-bar::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:linear-gradient(90deg,#fedd00 0 20%,#da291c 20% 50%,#001489 50%)}
-.claro .prc-logo img{width:40px;height:40px}.claro .prc-logo b{color:#001489}.claro .prc-logo span{color:#da291c;border-color:#fedd00}
-.claro .prc-perfil .av{color:#fff}.claro .prc-perfil span{color:#5f6584;opacity:1}
-.claro .chip-l{color:#001489;border-color:#d6dbef;background:#f1f3f9}
+.azul{--bg:#050c3a;--surface:#0d1752;--surface-2:#16216a;--fg:#eef1ff;--muted:#a9b1dc;--line:#26327c;--link:#fedd00;--ok:#5fd394;--ok-bg:#0f3a2a;--warn:#ffd45c;--warn-bg:#3a2f08;--bad:#ff8b80;--bad-bg:#3d1411;
+  --shadow:0 20px 44px -20px rgba(0,0,0,.65);color-scheme:dark;background:var(--bg);color:var(--fg)}
+body:has(.azul:not([hidden])){background:#050c3a}
+body:has(.azul:not([hidden])) .sheet{--bg:#050c3a;--surface:#0d1752;--surface-2:#16216a;--fg:#eef1ff;--muted:#a9b1dc;--line:#26327c;--bad:#ff8b80;--bad-bg:#3d1411;--ok:#5fd394;--ok-bg:#0f3a2a;color-scheme:dark}
+body:has(.azul:not([hidden])) .sheet{background:#0d1752;color:#eef1ff}
+body:has(.azul:not([hidden])) .head{background:rgba(0,10,71,.88);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
+body:has(.azul:not([hidden]))::before{background:#000a47}
+body:has(.azul:not([hidden])) .head .chip{color:#fff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+
+body:has(.azul:not([hidden])) footer{background:#050c3a;color:#a9b1dc;border-color:#26327c}
+#v-colab.azul .band{background:linear-gradient(120deg,#fff9e0 0%,#ffece8 55%,#eef1ff 100%);color:#151a3b}
+#v-colab.azul .band canvas{display:none}#v-colab.azul .band .saw{opacity:.35}
+#v-colab.azul .m-hero .eyebrow{color:#da291c}#v-colab.azul .m-hero p{color:#5f6584;opacity:1}
+.azul .prc-bar{background:#fff;color:#151a3b;border-bottom:0;box-shadow:0 1px 0 #e4e7f1;position:relative}
+.azul .prc-bar::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:linear-gradient(90deg,#fedd00 0 20%,#da291c 20% 50%,#001489 50%)}
+.azul .prc-logo img{width:40px;height:40px}.azul .prc-logo b{color:#001489}.azul .prc-logo span{color:#da291c;border-color:#fedd00}
+.azul .prc-perfil .av{color:#fff}.azul .prc-perfil span{color:#5f6584;opacity:1}
+.azul .chip-l{color:#001489;border-color:#d6dbef;background:#f1f3f9}
 .prc-hero{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;padding:clamp(22px,4vw,34px);border-radius:24px;margin-bottom:26px;
   background:radial-gradient(120% 140% at 100% 0%,#ffe2dd 0%,rgba(255,226,221,0) 55%),radial-gradient(90% 120% at 0% 100%,#fff3bf 0%,rgba(255,243,191,0) 60%),#fff;box-shadow:var(--shadow)}
 .prc-hero .eyebrow{color:#da291c}.prc-hero h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin:6px 0 4px}
@@ -417,17 +417,17 @@ body:has(.claro:not([hidden])) footer{background:#fff;color:#5f6584;border-color
 .prc-kpi{background:#fff;border:1px solid #eceef6;border-radius:18px;padding:14px 18px;min-width:150px}
 .prc-kpi small{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#5f6584;font-weight:900}
 .prc-kpi b{font-size:1.5rem;font-weight:900;color:#001489}
-.claro .tile{border:1px solid #eceef6}
-.claro .tile-top{height:118px;background:#fff6cc;color:#a77a00}
-.claro .tile:nth-child(4n+2) .tile-top{background:#ffe3df;color:#da291c}
-.claro .tile:nth-child(4n+3) .tile-top{background:#e6eaff;color:#001489}
-.claro .tile:nth-child(4n+4) .tile-top{background:#e3f5ea;color:#12804a}
-.claro .tile-top svg{width:58px;height:58px;padding:12px;border-radius:50%;background:#fff;box-shadow:0 8px 20px -10px rgba(17,24,63,.35);box-sizing:content-box}
-.claro .tile:hover{box-shadow:0 20px 40px -18px rgba(17,24,63,.35)}
-.claro .app{border-color:#eceef6}
-.claro .mes-t{color:#da291c}
-.claro .dias .d.sel{background:#da291c;border-color:#da291c;color:#fff}
-.claro .tabs button[aria-selected="true"]{border-bottom-color:#da291c}
+.azul .tile{border:1px solid #eceef6}
+.azul .tile-top{height:118px;background:#fff6cc;color:#a77a00}
+.azul .tile:nth-child(4n+2) .tile-top{background:#ffe3df;color:#da291c}
+.azul .tile:nth-child(4n+3) .tile-top{background:#e6eaff;color:#001489}
+.azul .tile:nth-child(4n+4) .tile-top{background:#e3f5ea;color:#12804a}
+.azul .tile-top svg{width:58px;height:58px;padding:12px;border-radius:50%;background:#fff;box-shadow:0 8px 20px -10px rgba(17,24,63,.35);box-sizing:content-box}
+.azul .tile:hover{box-shadow:0 20px 40px -18px rgba(17,24,63,.35)}
+.azul .app{border-color:#eceef6}
+.azul .mes-t{color:#da291c}
+.azul .dias .d.sel{background:#fedd00;border-color:#fedd00;color:#000a47}
+.azul .tabs button[aria-selected="true"]{border-bottom-color:#da291c}
 
 /* ---------- Colaboradores: estilo cartel (inspirado en teletoncr.com, colores Activo 20-30) ---------- */
 .poster{position:relative;overflow:hidden;color:#fff;background:radial-gradient(90% 120% at 85% 0%,#1f3be0 0%,rgba(31,59,224,0) 55%),radial-gradient(80% 110% at 0% 100%,#0b1a8f 0%,rgba(11,26,143,0) 60%),linear-gradient(160deg,#001489 0%,#000a47 100%)}
@@ -460,22 +460,27 @@ body:has(.claro:not([hidden])) footer{background:#fff;color:#5f6584;border-color
 @keyframes flota{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes brilla{0%,100%{transform:scale(1) rotate(0);opacity:1}50%{transform:scale(.6) rotate(25deg);opacity:.6}}
 .sube{position:relative;z-index:3;margin-top:-86px}
-.claro .prc-h{display:flex;align-items:center;gap:12px;font-size:1.5rem;margin:0 0 4px;color:#fff}
-.claro .prc-h span{background:#fff;color:#151a3b;padding:8px 18px;border-radius:999px;box-shadow:var(--shadow)}
-.claro .tiles{margin-top:18px}
-.claro .tile{border:0;border-radius:26px;box-shadow:0 2px 4px rgba(0,10,71,.06),0 24px 44px -24px rgba(0,10,71,.45);background:#fff;overflow:visible}
-.claro .tile-top{height:auto;background:none!important;display:block;padding:22px 22px 0}
-.claro .tile-top svg{width:30px;height:30px;padding:16px;border-radius:20px;color:#fff;background:linear-gradient(135deg,#ffe766,#f5b800);box-shadow:0 12px 24px -10px rgba(245,184,0,.8)}
-.claro .tile:nth-child(4n+2) .tile-top svg{background:linear-gradient(135deg,#ff6d5e,#c41d11);box-shadow:0 12px 24px -10px rgba(218,41,28,.7)}
-.claro .tile:nth-child(4n+3) .tile-top svg{background:linear-gradient(135deg,#3d5bff,#001489);box-shadow:0 12px 24px -10px rgba(0,20,137,.7)}
-.claro .tile:nth-child(4n+4) .tile-top svg{background:linear-gradient(135deg,#1a2a8a,#000a47);box-shadow:0 12px 24px -10px rgba(0,10,71,.7)}
-.claro .tile-b{padding:16px 22px 22px}.claro .tile-b small{display:block}.claro .tile-b b{font-size:1.2rem;font-weight:900}
-.claro .tile-b::after{content:"Entrar →";display:block;margin-top:12px;font-weight:900;font-size:.85rem;color:#da291c}
-.claro .tile:hover{transform:translateY(-6px) rotate(-.4deg)}
-.claro .app{border:0;border-radius:26px;box-shadow:0 2px 4px rgba(0,10,71,.06),0 24px 44px -24px rgba(0,10,71,.45)}
-.claro .to-card,.claro .sube>.card{border:0;border-radius:26px;box-shadow:0 2px 4px rgba(0,10,71,.06),0 24px 44px -24px rgba(0,10,71,.45)}
+.azul .prc-h{display:flex;align-items:center;gap:12px;font-size:1.5rem;margin:0 0 4px;color:#fff}
+.azul .prc-h span{background:#fedd00;color:#000a47;padding:8px 18px;border-radius:999px;box-shadow:var(--shadow)}
+.azul .tiles{margin-top:18px}
+.azul .tile{border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);background:linear-gradient(160deg,#13206b,#0b1550);overflow:visible}
+.azul .tile-top{height:auto;background:none!important;display:block;padding:22px 22px 0}
+.azul .tile-top svg{width:30px;height:30px;padding:16px;border-radius:20px;color:#fff;background:linear-gradient(135deg,#ffe766,#f5b800);box-shadow:0 12px 24px -10px rgba(245,184,0,.8)}
+.azul .tile:nth-child(4n+2) .tile-top svg{background:linear-gradient(135deg,#ff6d5e,#c41d11);box-shadow:0 12px 24px -10px rgba(218,41,28,.7)}
+.azul .tile:nth-child(4n+3) .tile-top svg{background:linear-gradient(135deg,#3d5bff,#001489);box-shadow:0 12px 24px -10px rgba(0,20,137,.7)}
+.azul .tile:nth-child(4n+4) .tile-top svg{background:linear-gradient(135deg,#2ec27e,#12804a);box-shadow:0 12px 24px -10px rgba(0,10,71,.7)}
+.azul .tile-b{padding:16px 22px 22px}.azul .tile-b small{display:block}.azul .tile-b b{font-size:1.2rem;font-weight:900}
+.azul .tile-b::after{content:"Entrar →";display:block;margin-top:12px;font-weight:900;font-size:.85rem;color:#fedd00}
+.azul .tile:hover{transform:translateY(-6px) rotate(-.4deg)}
+.azul .app{border:1px solid var(--line);border-radius:24px;background:linear-gradient(160deg,#13206b,#0b1550);box-shadow:var(--shadow)}
+.azul .to-card,.azul .sube>.card{border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
 @media (max-width:640px){.esf.amarilla{width:90px;height:90px;right:-24px;top:-30px}.esf.roja{display:none}.anillo{width:170px;height:170px;border-width:14px}.poster-grid{align-items:flex-start}}
 @media (prefers-reduced-motion:reduce){.esf,.chispa,.sierra-deco{animation:none}}
+.prc-marca{display:flex;align-items:center;gap:12px}.prc-ico{width:46px;height:46px;flex:none;filter:drop-shadow(0 8px 16px rgba(0,0,0,.35))}
+.prc-txt{line-height:1}.prc-txt b{display:block;font-size:1.55rem;font-weight:900;letter-spacing:-.01em;color:#fff}.prc-txt span{display:block;font-size:.68rem;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:#fedd00;margin-top:4px}
+.app-ico.prc .prc-ico{width:70px;height:70px}
+.azul .app-ico{color:#fedd00;height:auto;gap:8px}.azul .app-ico.prc small{color:#fedd00;letter-spacing:.16em;font-size:.62rem;font-weight:900}
+.azul .app-t{color:#fff}
 /* Panel lateral */
 .scrim{position:fixed;inset:0;background:rgba(0,10,71,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);z-index:20}
 .sheet{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--surface);z-index:21;overflow:auto;
@@ -703,31 +708,31 @@ footer img{width:34px;height:34px}
 </main>
 
 <!-- ============ COLABORADORES ============ -->
-<main id="v-colab" class="claro" hidden>
-  <section class="poster"><canvas data-dots></canvas><div class="deco" aria-hidden="true"><i class="esf amarilla"></i><i class="esf roja"></i><i class="esf blanca"></i><i class="anillo"></i><i class="anillo dos"></i><span class="chispa c1"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c2"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c3"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><img class="sierra-deco" src="../img/sierra.png" alt=""></div>
+<main id="v-colab" class="azul" hidden>
+  <section class="poster"><canvas data-dots></canvas><div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
     <div class="wrap poster-in"><span class="eyebrow">Mis aplicaciones</span><h1 class="poster-h" id="col-hola">Colaboradores</h1><p class="poster-p" id="col-sub"></p></div>
   </section>
   <div class="wrap sube"><div class="apps" id="col-apps"></div></div>
 </main>
-<main id="v-prc" class="claro" hidden>
-  <section class="poster"><canvas data-dots></canvas><div class="deco" aria-hidden="true"><i class="esf amarilla"></i><i class="esf roja"></i><i class="esf blanca"></i><i class="anillo"></i><i class="anillo dos"></i><span class="chispa c1"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c2"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c3"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><img class="sierra-deco" src="../img/sierra.png" alt=""></div>
-    <div class="wrap poster-in"><div class="poster-top"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><div class="prc-perfil" id="prc-perfil"></div></div>
+<main id="v-prc" class="azul" hidden>
+  <section class="poster"><canvas data-dots></canvas><div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
+    <div class="wrap poster-in"><div class="poster-top"><div class="prc-marca"><svg class="prc-ico" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gprc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5bff"/><stop offset="1" stop-color="#001489"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#gprc)"/><circle cx="14.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="33.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="24" cy="15.5" r="5.4" fill="#fedd00"/><path d="M7.5 34c0-4.7 3.2-7.6 7-7.6 2 0 3.7.8 4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M40.5 34c0-4.7-3.2-7.6-7-7.6-2 0-3.7.8-4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M14.5 37c0-6 4.2-9.6 9.5-9.6s9.5 3.6 9.5 9.6" stroke="#fedd00" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><div class="prc-txt"><b>People</b><span>Resource Center</span></div></div><div class="prc-perfil" id="prc-perfil"></div></div>
       <div class="poster-grid"><div><span class="eyebrow">People Resource Center</span><h1 class="poster-h" id="prc-hola">¡Hola!</h1><p class="poster-p" id="prc-pend"></p></div><div class="prc-kpis" id="prc-kpis"></div></div></div>
   </section>
   <div class="wrap sube prc-body"><h2 class="prc-h"><span>Mis gestiones</span></h2><div class="tiles" id="prc-tiles"></div></div>
 </main>
-<main id="v-timeoff" class="claro" hidden>
-  <section class="poster mini"><canvas data-dots></canvas><div class="deco" aria-hidden="true"><i class="esf amarilla"></i><i class="esf roja"></i><i class="esf blanca"></i><i class="anillo"></i><i class="anillo dos"></i><span class="chispa c1"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c2"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c3"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><img class="sierra-deco" src="../img/sierra.png" alt=""></div>
-    <div class="wrap poster-in"><div class="poster-top"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Tiempo <em>libre</em></h1></div>
+<main id="v-timeoff" class="azul" hidden>
+  <section class="poster mini"><canvas data-dots></canvas><div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
+    <div class="wrap poster-in"><div class="poster-top"><div class="prc-marca"><svg class="prc-ico" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gprc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5bff"/><stop offset="1" stop-color="#001489"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#gprc)"/><circle cx="14.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="33.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="24" cy="15.5" r="5.4" fill="#fedd00"/><path d="M7.5 34c0-4.7 3.2-7.6 7-7.6 2 0 3.7.8 4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M40.5 34c0-4.7-3.2-7.6-7-7.6-2 0-3.7.8-4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M14.5 37c0-6 4.2-9.6 9.5-9.6s9.5 3.6 9.5 9.6" stroke="#fedd00" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><div class="prc-txt"><b>People</b><span>Resource Center</span></div></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Tiempo <em>libre</em></h1></div>
   </section>
   <div class="wrap sube prc-body"><div class="card to-card"><div class="to-head"><h2>Calendario</h2><button class="btn btn-red" id="to-crear" style="padding:.6rem 1.2rem">Crear ausencia</button></div>
     <div class="to-grid"><div><div class="to-nav"><button class="mini" id="to-prev" aria-label="Meses anteriores">‹</button><button class="mini" id="to-next" aria-label="Meses siguientes">›</button></div><p class="to-tip">Arrastrá sobre el calendario desde la fecha de inicio hasta la de finalización, o tocá las dos fechas.</p><div class="to-cal" id="to-cal"></div>
       <div class="ley"><span><i class="lh"></i>Hoy</span><span><i class="ll"></i>Día laborable</span><span><i class="ln"></i>Día no laborable</span><span><i class="la"></i>Aprobado</span><span><i class="lp"></i>Pendiente</span><span><i class="lf"></i>Feriado</span></div></div>
       <aside class="to-side" id="to-side"></aside></div></div></div>
 </main>
-<main id="v-payroll" class="claro" hidden>
-  <section class="poster mini"><canvas data-dots></canvas><div class="deco" aria-hidden="true"><i class="esf amarilla"></i><i class="esf roja"></i><i class="esf blanca"></i><i class="anillo"></i><i class="anillo dos"></i><span class="chispa c1"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c2"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><span class="chispa c3"><svg viewBox="0 0 24 24"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z" fill="currentColor"/></svg></span><img class="sierra-deco" src="../img/sierra.png" alt=""></div>
-    <div class="wrap poster-in"><div class="poster-top"><div class="prc-logo"><img src="../img/logo-color.png" alt=""><b>PEOPLE</b><span>RESOURCE<br>CENTER</span></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Pay<em>roll</em></h1></div>
+<main id="v-payroll" class="azul" hidden>
+  <section class="poster mini"><canvas data-dots></canvas><div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
+    <div class="wrap poster-in"><div class="poster-top"><div class="prc-marca"><svg class="prc-ico" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="gprc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5bff"/><stop offset="1" stop-color="#001489"/></linearGradient></defs><rect width="48" height="48" rx="14" fill="url(#gprc)"/><circle cx="14.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="33.5" cy="18" r="4.2" fill="#fff" opacity=".85"/><circle cx="24" cy="15.5" r="5.4" fill="#fedd00"/><path d="M7.5 34c0-4.7 3.2-7.6 7-7.6 2 0 3.7.8 4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M40.5 34c0-4.7-3.2-7.6-7-7.6-2 0-3.7.8-4.9 2.1" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/><path d="M14.5 37c0-6 4.2-9.6 9.5-9.6s9.5 3.6 9.5 9.6" stroke="#fedd00" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><div class="prc-txt"><b>People</b><span>Resource Center</span></div></div><button class="chip-l" data-rhgo="prc">← Volver al PRC</button></div><h1 class="poster-h sm">Pay<em>roll</em></h1></div>
   </section>
   <div class="wrap sube prc-body"><div class="card"><nav class="tabs" id="pay-tabs"><button data-pay="boletas">Boleta de pago</button><button data-pay="cartas">Cartas</button><button data-pay="horas">Horas extra</button></nav><div class="pad-x pay" id="pay-cont"></div></div></div>
 </main>
