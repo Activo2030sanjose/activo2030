@@ -153,7 +153,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .acc details[open]{box-shadow:var(--shadow)}
 .acc summary{list-style:none;cursor:pointer;padding:18px 20px;font-weight:900;display:flex;justify-content:space-between;gap:14px;align-items:center}
 .acc summary::-webkit-details-marker{display:none}
-.acc summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;background:var(--surface-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23da291c' stroke-width='3'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E") center/14px no-repeat;transition:transform .2s}
+.acc summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;background:var(--surface-2) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23da291c%27 stroke-width=%273%27%3E%3Cpath d=%27M12 5v14M5 12h14%27/%3E%3C/svg%3E") center/14px no-repeat;transition:transform .2s}
 .acc details[open] summary::after{transform:rotate(45deg)}
 .acc .ans{padding:0 20px 18px;color:var(--muted);max-width:62ch}
 .motto{background:var(--band-b);color:#fff;text-align:center;position:relative;overflow:hidden}
@@ -534,7 +534,7 @@ body:has(#v-prc:not([hidden]),#v-timeoff:not([hidden]),#v-payroll:not([hidden]))
 .a11y .tg{font-size:.8125rem;text-align:left;display:flex;gap:8px;align-items:center}
 .a11y .reset{margin-top:12px;width:100%;border:0;background:transparent;color:var(--link);font-weight:900;cursor:pointer;padding:6px}
 :root.links a,:root.links button{text-decoration:underline;text-underline-offset:3px;outline:2px dashed var(--rojo);outline-offset:2px}
-:root.bigcur,:root.bigcur *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l16 9-7 2-3 7z' fill='%23000a47' stroke='%23fedd00' stroke-width='1.5'/%3E%3C/svg%3E") 4 2,auto!important}
+:root.bigcur,:root.bigcur *{cursor:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%2740%27 viewBox=%270 0 24 24%27%3E%3Cpath d=%27M4 2l16 9-7 2-3 7z%27 fill=%27%23000a47%27 stroke=%27%23fedd00%27 stroke-width=%271.5%27/%3E%3C/svg%3E") 4 2,auto!important}
 .guide{position:fixed;left:0;right:0;height:44px;background:rgba(254,221,0,.22);border-block:2px solid var(--amarillo);pointer-events:none;z-index:14;top:0}
 :root.still *,:root.still *::before,:root.still *::after{animation:none!important;transition:none!important}
 
@@ -578,27 +578,76 @@ footer img{width:34px;height:34px}
 }
 
 
-/* ===== Tema vidrio · paletas Cryptic (#7EC9F5→#3957ED) y Uxintace ===== */
-:root:not(.hc){--azul:#3957ED;--azul-2:#3E7BA6;--noche:#1d2b55;--link:#3957ED;
-  --bg:#eef4fb;--surface:rgba(255,255,255,.62);--surface-2:rgba(208,225,245,.6);--fg:#13224a;--muted:#415D8A;--line:rgba(255,255,255,.8);
-  --band-a:#7EC9F5;--band-b:#3957ED;--glass:rgba(255,255,255,.2);--glass-line:rgba(255,255,255,.5);--campo:rgba(255,255,255,.75);
-  --grad:linear-gradient(115deg,#7EC9F5 0%,#3957ED 100%);--vidrio:blur(18px) saturate(160%);
-  --shadow:0 1px 0 rgba(255,255,255,.75) inset,0 22px 50px -26px rgba(57,87,237,.45)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not(.hc){--bg:#0a1330;--surface:rgba(255,255,255,.07);--surface-2:rgba(127,165,201,.14);--fg:#eef3ff;--muted:#ABBCDA;--line:rgba(255,255,255,.14);--link:#7EC9F5;--band-a:#3E7BA6;--band-b:#1b2f7a;--glass:rgba(255,255,255,.10);--glass-line:rgba(255,255,255,.22);--campo:rgba(255,255,255,.06);--shadow:0 1px 0 rgba(255,255,255,.08) inset,0 24px 50px -24px rgba(0,0,0,.75);color-scheme:dark}}
-:root[data-theme="dark"]:not(.hc){--bg:#0a1330;--surface:rgba(255,255,255,.07);--surface-2:rgba(127,165,201,.14);--fg:#eef3ff;--muted:#ABBCDA;--line:rgba(255,255,255,.14);--link:#7EC9F5;--band-a:#3E7BA6;--band-b:#1b2f7a;--glass:rgba(255,255,255,.10);--glass-line:rgba(255,255,255,.22);--campo:rgba(255,255,255,.06);--shadow:0 1px 0 rgba(255,255,255,.08) inset,0 24px 50px -24px rgba(0,0,0,.75);color-scheme:dark}
-:root:not(.hc) body{background:radial-gradient(38% 42% at 8% 12%,rgba(126,201,245,.5),transparent 70%),radial-gradient(34% 38% at 92% 28%,rgba(57,87,237,.32),transparent 70%),radial-gradient(42% 40% at 50% 104%,rgba(171,188,218,.5),transparent 70%),var(--bg);background-attachment:fixed}
-:root:not(.hc) .card,:root:not(.hc) .app,:root:not(.hc) .tile,:root:not(.hc) .sumbar{background:var(--surface);-webkit-backdrop-filter:var(--vidrio);backdrop-filter:var(--vidrio);border:1px solid var(--line);box-shadow:var(--shadow)}
+/* ===== Tema vidrio · paletas Cryptic (#7EC9F5 → #3957ED) y Uxintace ===== */
+:root:not(.hc),:root:not(.hc) .azul{--azul:#3957ED;--azul-2:#3E7BA6;--noche:#1d2b55;--band-a:#7EC9F5;--band-b:#3957ED;
+  --grad:linear-gradient(120deg,#7EC9F5 0%,#5b8ff0 45%,#3957ED 100%);--vidrio:blur(20px) saturate(170%);--bg:#eaf2fb;--surface:linear-gradient(145deg,rgba(255,255,255,.78),rgba(255,255,255,.42));--surface-2:rgba(204,225,244,.55);--fg:#13224a;--muted:#415D8A;--line:rgba(255,255,255,.85);--link:#3957ED;--glass:rgba(255,255,255,.22);--glass-line:rgba(255,255,255,.5);--campo:rgba(255,255,255,.72);--ok:#0d7a3c;--ok-bg:rgba(225,244,233,.8);--bad:#b3241a;--bad-bg:rgba(253,229,226,.85);--warn:#8f5600;--warn-bg:rgba(255,243,196,.85);--shadow:0 1px 0 rgba(255,255,255,.9) inset,0 24px 50px -26px rgba(57,87,237,.5);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not(.hc),:root:not([data-theme="light"]):not(.hc) .azul{--bg:#0a1330;--surface:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));--surface-2:rgba(127,165,201,.16);--fg:#eef3ff;--muted:#ABBCDA;--line:rgba(255,255,255,.16);--link:#7EC9F5;--glass:rgba(255,255,255,.10);--glass-line:rgba(255,255,255,.24);--campo:rgba(255,255,255,.07);--ok:#63d699;--ok-bg:rgba(14,50,34,.7);--bad:#ff8b80;--bad-bg:rgba(59,19,16,.7);--warn:#ffd45c;--warn-bg:rgba(56,45,7,.7);--shadow:0 1px 0 rgba(255,255,255,.1) inset,0 26px 50px -24px rgba(0,0,0,.8);color-scheme:dark;--grad:linear-gradient(120deg,#3E7BA6 0%,#2f4fc9 55%,#1b2f7a 100%)}}
+:root[data-theme="dark"]:not(.hc),:root[data-theme="dark"]:not(.hc) .azul{--bg:#0a1330;--surface:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));--surface-2:rgba(127,165,201,.16);--fg:#eef3ff;--muted:#ABBCDA;--line:rgba(255,255,255,.16);--link:#7EC9F5;--glass:rgba(255,255,255,.10);--glass-line:rgba(255,255,255,.24);--campo:rgba(255,255,255,.07);--ok:#63d699;--ok-bg:rgba(14,50,34,.7);--bad:#ff8b80;--bad-bg:rgba(59,19,16,.7);--warn:#ffd45c;--warn-bg:rgba(56,45,7,.7);--shadow:0 1px 0 rgba(255,255,255,.1) inset,0 26px 50px -24px rgba(0,0,0,.8);color-scheme:dark;--grad:linear-gradient(120deg,#3E7BA6 0%,#2f4fc9 55%,#1b2f7a 100%)}
+:root:not(.hc) body,:root:not(.hc) body:has(.azul:not([hidden])){background:radial-gradient(38% 42% at 6% 10%,rgba(126,201,245,.55),transparent 70%),radial-gradient(34% 38% at 94% 26%,rgba(57,87,237,.35),transparent 70%),radial-gradient(44% 40% at 50% 106%,rgba(171,188,218,.55),transparent 70%),var(--bg);background-attachment:fixed}
+/* Cuadros de vidrio */
+:root:not(.hc) .card,:root:not(.hc) .app,:root:not(.hc) .tile,:root:not(.hc) .sumbar,:root:not(.hc) .prc-kpi,:root:not(.hc) .sheet{background:var(--surface);-webkit-backdrop-filter:var(--vidrio);backdrop-filter:var(--vidrio);border:1px solid var(--line);box-shadow:var(--shadow);color:var(--fg)}
 :root:not(.hc) .app:nth-child(n){background:var(--surface)}
-:root:not(.hc) .band{background:var(--grad)}
-:root:not(.hc) .band::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 82% 18%,rgba(255,255,255,.45) 0 7%,transparent 26%),radial-gradient(circle at 12% 88%,rgba(126,201,245,.75) 0 9%,transparent 32%),radial-gradient(circle at 55% 120%,rgba(57,87,237,.6) 0 12%,transparent 40%);filter:blur(14px)}
-:root:not(.hc) .band .wrap{z-index:1}
-:root:not(.hc) .saw{opacity:.08}
-:root:not(.hc) .head{background:rgba(57,87,237,.5);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid rgba(255,255,255,.25)}
-:root:not(.hc) .btn-red,:root:not(.hc) .btn-blue,:root:not(.hc) .btn-red:hover,:root:not(.hc) .btn-blue:hover{background:var(--grad);color:#fff;box-shadow:0 12px 26px -12px rgba(57,87,237,.85)}
-:root:not(.hc) .btn-red:hover,:root:not(.hc) .btn-blue:hover{filter:brightness(1.06)}
-:root:not(.hc) .btn-soft{background:var(--glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line)}
-:root:not(.hc) .input,:root:not(.hc) .search{background:var(--campo)}
+:root:not(.hc) .card,:root:not(.hc) .app,:root:not(.hc) .tile{border-radius:24px}
+:root:not(.hc) .prc-kpi b{color:var(--link)}:root:not(.hc) .prc-kpi small{color:var(--muted)}
+/* Bandas con degradado, luces y sierras de vidrio */
+:root:not(.hc) .band,:root:not(.hc) .poster{background:var(--grad);position:relative;overflow:hidden;isolation:isolate}
+:root:not(.hc) .band::before,:root:not(.hc) .poster::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 80% 15%,rgba(255,255,255,.55) 0 6%,transparent 24%),radial-gradient(circle at 10% 90%,rgba(126,201,245,.9) 0 10%,transparent 34%),radial-gradient(circle at 60% 115%,rgba(57,87,237,.75) 0 14%,transparent 42%),radial-gradient(circle at 35% 10%,rgba(204,225,244,.5) 0 5%,transparent 22%);filter:blur(16px)}
+:root:not(.hc) .saw{opacity:1;animation:spin 80s linear infinite;z-index:0}
+:root:not(.hc) .saw img{display:none}
+:root:not(.hc) .saw::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23fff%22 stop-opacity=%22.95%22/%3E%3Cstop offset=%22.5%22 stop-color=%22%23fff%22 stop-opacity=%22.25%22/%3E%3Cstop offset=%221%22 stop-color=%22%23fff%22 stop-opacity=%22.7%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill=%22none%22 stroke=%22url%28%23g%29%22 stroke-width=%223.6%22 d=%22M93.6 17.6Q100.0 8.0 106.4 17.6Q112.8 27.1 122.2 20.3Q131.5 13.5 134.2 24.7Q137.0 35.9 148.1 32.7Q159.1 29.5 157.9 41.0Q156.7 52.4 168.2 53.2Q179.7 54.0 174.6 64.3Q169.5 74.7 180.1 79.4Q190.6 84.0 182.3 92.0Q174.0 100.0 182.3 108.0Q190.6 116.0 180.1 120.6Q169.5 125.3 174.6 135.7Q179.7 146.0 168.2 146.8Q156.7 147.6 157.9 159.0Q159.1 170.5 148.1 167.3Q137.0 164.1 134.2 175.3Q131.5 186.5 122.2 179.7Q112.8 172.9 106.4 182.4Q100.0 192.0 93.6 182.4Q87.2 172.9 77.8 179.7Q68.5 186.5 65.8 175.3Q63.0 164.1 51.9 167.3Q40.9 170.5 42.1 159.0Q43.3 147.6 31.8 146.8Q20.3 146.0 25.4 135.7Q30.5 125.3 19.9 120.6Q9.4 116.0 17.7 108.0Q26.0 100.0 17.7 92.0Q9.4 84.0 19.9 79.4Q30.5 74.7 25.4 64.3Q20.3 54.0 31.8 53.2Q43.3 52.4 42.1 41.0Q40.9 29.5 51.9 32.7Q63.0 35.9 65.8 24.7Q68.5 13.5 77.8 20.3Q87.2 27.1 93.6 17.6ZM140 100A40 40 0 1 1 60 100A40 40 0 1 1 140 100Z%22/%3E%3C/svg%3E") center/contain no-repeat,linear-gradient(140deg,rgba(255,255,255,.75),rgba(255,255,255,.2) 50%,rgba(204,225,244,.55));-webkit-backdrop-filter:blur(10px) saturate(180%);backdrop-filter:blur(10px) saturate(180%);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Cpath fill=%22%23fff%22 fill-rule=%22evenodd%22 d=%22M93.6 17.6Q100.0 8.0 106.4 17.6Q112.8 27.1 122.2 20.3Q131.5 13.5 134.2 24.7Q137.0 35.9 148.1 32.7Q159.1 29.5 157.9 41.0Q156.7 52.4 168.2 53.2Q179.7 54.0 174.6 64.3Q169.5 74.7 180.1 79.4Q190.6 84.0 182.3 92.0Q174.0 100.0 182.3 108.0Q190.6 116.0 180.1 120.6Q169.5 125.3 174.6 135.7Q179.7 146.0 168.2 146.8Q156.7 147.6 157.9 159.0Q159.1 170.5 148.1 167.3Q137.0 164.1 134.2 175.3Q131.5 186.5 122.2 179.7Q112.8 172.9 106.4 182.4Q100.0 192.0 93.6 182.4Q87.2 172.9 77.8 179.7Q68.5 186.5 65.8 175.3Q63.0 164.1 51.9 167.3Q40.9 170.5 42.1 159.0Q43.3 147.6 31.8 146.8Q20.3 146.0 25.4 135.7Q30.5 125.3 19.9 120.6Q9.4 116.0 17.7 108.0Q26.0 100.0 17.7 92.0Q9.4 84.0 19.9 79.4Q30.5 74.7 25.4 64.3Q20.3 54.0 31.8 53.2Q43.3 52.4 42.1 41.0Q40.9 29.5 51.9 32.7Q63.0 35.9 65.8 24.7Q68.5 13.5 77.8 20.3Q87.2 27.1 93.6 17.6ZM140 100A40 40 0 1 1 60 100A40 40 0 1 1 140 100Z%22/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Cpath fill=%22%23fff%22 fill-rule=%22evenodd%22 d=%22M93.6 17.6Q100.0 8.0 106.4 17.6Q112.8 27.1 122.2 20.3Q131.5 13.5 134.2 24.7Q137.0 35.9 148.1 32.7Q159.1 29.5 157.9 41.0Q156.7 52.4 168.2 53.2Q179.7 54.0 174.6 64.3Q169.5 74.7 180.1 79.4Q190.6 84.0 182.3 92.0Q174.0 100.0 182.3 108.0Q190.6 116.0 180.1 120.6Q169.5 125.3 174.6 135.7Q179.7 146.0 168.2 146.8Q156.7 147.6 157.9 159.0Q159.1 170.5 148.1 167.3Q137.0 164.1 134.2 175.3Q131.5 186.5 122.2 179.7Q112.8 172.9 106.4 182.4Q100.0 192.0 93.6 182.4Q87.2 172.9 77.8 179.7Q68.5 186.5 65.8 175.3Q63.0 164.1 51.9 167.3Q40.9 170.5 42.1 159.0Q43.3 147.6 31.8 146.8Q20.3 146.0 25.4 135.7Q30.5 125.3 19.9 120.6Q9.4 116.0 17.7 108.0Q26.0 100.0 17.7 92.0Q9.4 84.0 19.9 79.4Q30.5 74.7 25.4 64.3Q20.3 54.0 31.8 53.2Q43.3 52.4 42.1 41.0Q40.9 29.5 51.9 32.7Q63.0 35.9 65.8 24.7Q68.5 13.5 77.8 20.3Q87.2 27.1 93.6 17.6ZM140 100A40 40 0 1 1 60 100A40 40 0 1 1 140 100Z%22/%3E%3C/svg%3E") center/contain no-repeat}
+:root:not(.hc) .band::after,:root:not(.hc) .poster::after{content:"";position:absolute;width:clamp(200px,30vw,340px);aspect-ratio:1;left:-90px;bottom:-130px;z-index:0;pointer-events:none;animation:spin 60s linear infinite reverse;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23fff%22 stop-opacity=%22.95%22/%3E%3Cstop offset=%22.5%22 stop-color=%22%23fff%22 stop-opacity=%22.25%22/%3E%3Cstop offset=%221%22 stop-color=%22%23fff%22 stop-opacity=%22.7%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill=%22none%22 stroke=%22url%28%23g%29%22 stroke-width=%223.6%22 d=%22M93.6 17.6Q100.0 8.0 106.4 17.6Q112.8 27.1 122.2 20.3Q131.5 13.5 134.2 24.7Q137.0 35.9 148.1 32.7Q159.1 29.5 157.9 41.0Q156.7 52.4 168.2 53.2Q179.7 54.0 174.6 64.3Q169.5 74.7 180.1 79.4Q190.6 84.0 182.3 92.0Q174.0 100.0 182.3 108.0Q190.6 116.0 180.1 120.6Q169.5 125.3 174.6 135.7Q179.7 146.0 168.2 146.8Q156.7 147.6 157.9 159.0Q159.1 170.5 148.1 167.3Q137.0 164.1 134.2 175.3Q131.5 186.5 122.2 179.7Q112.8 172.9 106.4 182.4Q100.0 192.0 93.6 182.4Q87.2 172.9 77.8 179.7Q68.5 186.5 65.8 175.3Q63.0 164.1 51.9 167.3Q40.9 170.5 42.1 159.0Q43.3 147.6 31.8 146.8Q20.3 146.0 25.4 135.7Q30.5 125.3 19.9 120.6Q9.4 116.0 17.7 108.0Q26.0 100.0 17.7 92.0Q9.4 84.0 19.9 79.4Q30.5 74.7 25.4 64.3Q20.3 54.0 31.8 53.2Q43.3 52.4 42.1 41.0Q40.9 29.5 51.9 32.7Q63.0 35.9 65.8 24.7Q68.5 13.5 77.8 20.3Q87.2 27.1 93.6 17.6ZM140 100A40 40 0 1 1 60 100A40 40 0 1 1 140 100Z%22/%3E%3C/svg%3E") center/contain no-repeat,linear-gradient(140deg,rgba(255,255,255,.75),rgba(255,255,255,.2) 50%,rgba(204,225,244,.55));-webkit-backdrop-filter:blur(10px) saturate(180%);backdrop-filter:blur(10px) saturate(180%);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Cpath fill=%22%23fff%22 fill-rule=%22evenodd%22 d=%22M93.6 17.6Q100.0 8.0 106.4 17.6Q112.8 27.1 122.2 20.3Q131.5 13.5 134.2 24.7Q137.0 35.9 148.1 32.7Q159.1 29.5 157.9 41.0Q156.7 52.4 168.2 53.2Q179.7 54.0 174.6 64.3Q169.5 74.7 180.1 79.4Q190.6 84.0 182.3 92.0Q174.0 100.0 182.3 108.0Q190.6 116.0 180.1 120.6Q169.5 125.3 174.6 135.7Q179.7 146.0 168.2 146.8Q156.7 147.6 157.9 159.0Q159.1 170.5 148.1 167.3Q137.0 164.1 134.2 175.3Q131.5 186.5 122.2 179.7Q112.8 172.9 106.4 182.4Q100.0 192.0 93.6 182.4Q87.2 172.9 77.8 179.7Q68.5 186.5 65.8 175.3Q63.0 164.1 51.9 167.3Q40.9 170.5 42.1 159.0Q43.3 147.6 31.8 146.8Q20.3 146.0 25.4 135.7Q30.5 125.3 19.9 120.6Q9.4 116.0 17.7 108.0Q26.0 100.0 17.7 92.0Q9.4 84.0 19.9 79.4Q30.5 74.7 25.4 64.3Q20.3 54.0 31.8 53.2Q43.3 52.4 42.1 41.0Q40.9 29.5 51.9 32.7Q63.0 35.9 65.8 24.7Q68.5 13.5 77.8 20.3Q87.2 27.1 93.6 17.6ZM140 100A40 40 0 1 1 60 100A40 40 0 1 1 140 100Z%22/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Cpath fill=%22%23fff%22 fill-rule=%22evenodd%22 d=%22M93.6 17.6Q100.0 8.0 106.4 17.6Q112.8 27.1 122.2 20.3Q131.5 13.5 134.2 24.7Q137.0 35.9 148.1 32.7Q159.1 29.5 157.9 41.0Q156.7 52.4 168.2 53.2Q179.7 54.0 174.6 64.3Q169.5 74.7 180.1 79.4Q190.6 84.0 182.3 92.0Q174.0 100.0 182.3 108.0Q190.6 116.0 180.1 120.6Q169.5 125.3 174.6 135.7Q179.7 146.0 168.2 146.8Q156.7 147.6 157.9 159.0Q159.1 170.5 148.1 167.3Q137.0 164.1 134.2 175.3Q131.5 186.5 122.2 179.7Q112.8 172.9 106.4 182.4Q100.0 192.0 93.6 182.4Q87.2 172.9 77.8 179.7Q68.5 186.5 65.8 175.3Q63.0 164.1 51.9 167.3Q40.9 170.5 42.1 159.0Q43.3 147.6 31.8 146.8Q20.3 146.0 25.4 135.7Q30.5 125.3 19.9 120.6Q9.4 116.0 17.7 108.0Q26.0 100.0 17.7 92.0Q9.4 84.0 19.9 79.4Q30.5 74.7 25.4 64.3Q20.3 54.0 31.8 53.2Q43.3 52.4 42.1 41.0Q40.9 29.5 51.9 32.7Q63.0 35.9 65.8 24.7Q68.5 13.5 77.8 20.3Q87.2 27.1 93.6 17.6ZM140 100A40 40 0 1 1 60 100A40 40 0 1 1 140 100Z%22/%3E%3C/svg%3E") center/contain no-repeat}
+:root:not(.hc) .poster .saw-p{display:none}
+:root:not(.hc) .band .wrap,:root:not(.hc) .band>*:not(.saw):not(canvas){position:relative;z-index:1}
+:root:not(.hc) .poster .esf,:root:not(.hc) .poster .anillo,:root:not(.hc) .poster .chispa,:root:not(.hc) .poster .sierra-deco{display:none}
+/* Barra superior y PRC */
+:root:not(.hc) .head,:root:not(.hc) body:has(.azul:not([hidden])) .head{background:rgba(57,87,237,.45);-webkit-backdrop-filter:blur(18px) saturate(170%);backdrop-filter:blur(18px) saturate(170%);border-bottom:1px solid rgba(255,255,255,.28);color:#fff}
+:root:not(.hc) body:has(.azul:not([hidden]))::before{background:#3957ED}
+:root:not(.hc) .azul .prc-bar{background:var(--surface);-webkit-backdrop-filter:var(--vidrio);backdrop-filter:var(--vidrio);color:var(--fg);box-shadow:var(--shadow)}
+:root:not(.hc) .azul .prc-logo b{color:var(--link)}
+:root:not(.hc) .azul .chip-l{color:var(--link);background:var(--glass);border-color:var(--line)}
+:root:not(.hc) .azul .tile-top,:root:not(.hc) .azul .tile:nth-child(n) .tile-top{background:linear-gradient(140deg,#CCE1F4,#7FA5C9);color:#13224a}
+:root:not(.hc) .azul .tile:nth-child(4n+2) .tile-top{background:linear-gradient(140deg,#D0E1F5,#ABBCDA)}
+:root:not(.hc) .azul .tile:nth-child(4n+3) .tile-top{background:linear-gradient(140deg,#7EC9F5,#3957ED);color:#fff}
+:root:not(.hc) .azul .tile:nth-child(4n+4) .tile-top{background:linear-gradient(140deg,#7FA5C9,#415D8A);color:#fff}
+:root:not(.hc) .azul .tile-top svg{background:rgba(255,255,255,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.7)}
+:root:not(.hc) .azul .tabs button[aria-selected="true"]{border-bottom-color:#3957ED}
+:root:not(.hc) .azul .dias .d.sel{background:#3957ED;border-color:#3957ED;color:#fff}
+:root:not(.hc) body:has(.azul:not([hidden])) footer,:root:not(.hc) footer{background:var(--glass);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:var(--muted)}
+/* Botones y campos */
+:root:not(.hc) .btn-red,:root:not(.hc) .btn-blue,:root:not(.hc) .btn-red:hover,:root:not(.hc) .btn-blue:hover{background:linear-gradient(120deg,#7EC9F5,#3957ED);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 14px 28px -12px rgba(57,87,237,.9)}
+:root:not(.hc) .btn-red:hover,:root:not(.hc) .btn-blue:hover{filter:brightness(1.07)}
+:root:not(.hc) .btn-soft{background:var(--glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line);color:var(--fg)}
+:root:not(.hc) .input,:root:not(.hc) .search{background:var(--campo);border-color:var(--line);color:var(--fg)}
 :root:not(.hc) .input:focus,:root:not(.hc) .search:focus{border-color:#3957ED;box-shadow:0 0 0 4px rgba(126,201,245,.35)}
+:root:not(.hc) .seg,:root:not(.hc) .st{background:var(--glass);border:1px solid var(--line)}
+:root:not(.hc) .st button[aria-pressed="true"][data-v="A"]{background:linear-gradient(120deg,#4fc58a,#12804a)}
+
+/* ===== Liquid Glass (estilo iOS 26) ===== */
+:root:not(.hc){--f-display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue","Lato",Arial,sans-serif;--f-body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","Lato",Arial,sans-serif;--r:30px;
+  --vidrio:blur(28px) saturate(190%) brightness(1.04);
+  --lg-fill:linear-gradient(160deg,rgba(255,255,255,.42),rgba(255,255,255,.16) 45%,rgba(255,255,255,.26));
+  --lg-rim:inset 0 1px 1px rgba(255,255,255,.95),inset 0 -1px 1px rgba(255,255,255,.35),inset 0 0 24px rgba(255,255,255,.22),0 24px 48px -22px rgba(20,40,120,.38),0 2px 6px rgba(20,40,120,.08)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not(.hc){--lg-fill:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.05) 45%,rgba(255,255,255,.09));--lg-rim:inset 0 1px 1px rgba(255,255,255,.35),inset 0 -1px 1px rgba(255,255,255,.08),inset 0 0 24px rgba(255,255,255,.06),0 26px 50px -22px rgba(0,0,0,.8)}}
+:root[data-theme="dark"]:not(.hc){--lg-fill:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.05) 45%,rgba(255,255,255,.09));--lg-rim:inset 0 1px 1px rgba(255,255,255,.35),inset 0 -1px 1px rgba(255,255,255,.08),inset 0 0 24px rgba(255,255,255,.06),0 26px 50px -22px rgba(0,0,0,.8)}
+:root:not(.hc) body{font-family:var(--f-body);-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
+:root:not(.hc) h1,:root:not(.hc) h2,:root:not(.hc) h3,:root:not(.hc) .poster-h{letter-spacing:-.025em}
+:root:not(.hc) .card,:root:not(.hc) .app,:root:not(.hc) .app:nth-child(n),:root:not(.hc) .tile,:root:not(.hc) .sumbar,:root:not(.hc) .prc-kpi,:root:not(.hc) .sheet,:root:not(.hc) .azul .prc-bar{background:var(--lg-fill);-webkit-backdrop-filter:var(--vidrio);backdrop-filter:var(--vidrio);border:1px solid rgba(255,255,255,.5);box-shadow:var(--lg-rim);border-radius:30px}
+:root:not(.hc) .sheet{border-radius:34px 34px 0 0}
+/* Barra superior flotante tipo cápsula */
+:root:not(.hc) .head,:root:not(.hc) body:has(.azul:not([hidden])) .head{top:calc(8px + env(safe-area-inset-top,0px));margin:8px auto 0;width:min(1140px,calc(100% - 16px));border-radius:26px;background:rgba(57,87,237,.32);-webkit-backdrop-filter:blur(28px) saturate(190%);backdrop-filter:blur(28px) saturate(190%);border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 1px 1px rgba(255,255,255,.7),0 18px 40px -20px rgba(20,40,120,.5)}
+:root:not(.hc) .chip,:root:not(.hc) .h-back{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 1px 1px rgba(255,255,255,.6);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+/* Botones cápsula de vidrio */
+:root:not(.hc) .btn{border-radius:999px;font-weight:700;letter-spacing:-.01em}
+:root:not(.hc) .btn-red,:root:not(.hc) .btn-blue,:root:not(.hc) .btn-red:hover,:root:not(.hc) .btn-blue:hover{background:linear-gradient(180deg,rgba(126,201,245,.95),rgba(57,87,237,.95));border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 1px 1px rgba(255,255,255,.75),inset 0 -2px 6px rgba(20,40,160,.35),0 14px 28px -12px rgba(57,87,237,.85)}
+:root:not(.hc) .btn-soft{background:var(--lg-fill);border:1px solid rgba(255,255,255,.55);box-shadow:inset 0 1px 1px rgba(255,255,255,.8),0 8px 18px -12px rgba(20,40,120,.4)}
+:root:not(.hc) .btn:active{transform:scale(.97)}
+/* Campos y controles segmentados */
+:root:not(.hc) .input,:root:not(.hc) .search{border-radius:16px;border:1px solid rgba(255,255,255,.6);box-shadow:inset 0 1px 2px rgba(20,40,120,.08),inset 0 -1px 0 rgba(255,255,255,.6)}
+:root:not(.hc) .seg,:root:not(.hc) .st{background:rgba(120,150,200,.16);border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:3px}
+:root:not(.hc) .seg button[aria-pressed="true"],:root:not(.hc) .st button[aria-pressed="true"]{box-shadow:inset 0 1px 1px rgba(255,255,255,.6),0 3px 10px -3px rgba(20,40,120,.45)}
+:root:not(.hc) .seg button[aria-pressed="true"]{background:rgba(255,255,255,.85);color:#13224a}
+/* Sierras: borde más brillante */
+:root:not(.hc) .saw::before,:root:not(.hc) .band::after,:root:not(.hc) .poster::after{filter:drop-shadow(0 18px 30px rgba(20,40,120,.35))}
 /* Soy Macero y formularios en celular */
 @media (max-width:560px){
   .fgrid{grid-template-columns:1fr}
@@ -903,12 +952,12 @@ footer img{width:34px;height:34px}
 <div class="scrim" id="scrim" hidden></div>
 <aside class="sheet" id="sheet" hidden aria-modal="true" role="dialog"></aside>
 <div class="toast" id="toast" hidden role="status"></div>
-<script src="../lib/estado-cuenta.js?v=1793524311"></script>
-<script src="../lib/almacen.js?v=1793524311"></script>
-<script src="../lib/operaciones.js?v=1793524311"></script>
-<script src="../lib/rh.js?v=1793524311"></script>
-<script src="../lib/webpush.js?v=1793524311"></script>
-<script src="../lib/portal.js?v=1793524311"></script>
+<script src="../lib/estado-cuenta.js?v=1793524721"></script>
+<script src="../lib/almacen.js?v=1793524721"></script>
+<script src="../lib/operaciones.js?v=1793524721"></script>
+<script src="../lib/rh.js?v=1793524721"></script>
+<script src="../lib/webpush.js?v=1793524721"></script>
+<script src="../lib/portal.js?v=1793524721"></script>
 
 </body>
 </html>
