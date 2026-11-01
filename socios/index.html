@@ -426,27 +426,6 @@ footer img{width:34px;height:34px}
 </header>
 
 
-<!-- ============ CONFIGURACIÓN INICIAL ============ -->
-<main id="v-setup" hidden>
-  <section class="band"><canvas data-dots></canvas>
-    <div class="saw" aria-hidden="true" style="width:520px;height:520px;right:-160px;top:-170px"><img src="../img/sierra.png" alt=""></div>
-    <div class="wrap m-hero"><span class="eyebrow">Primera vez</span><h1>Configuración inicial</h1><p>Creá el acceso del Superadmin. Solo funciona una vez y requiere el token del repositorio.</p></div>
-  </section>
-  <div class="wrap lift">
-    <form class="card ses" id="f-setup" novalidate>
-      <div class="fgrid">
-        <div class="field"><label for="st-usuario">Usuario</label><input class="input" id="st-usuario" value="Davidsm004" autocomplete="username"></div>
-        <div class="field"><label for="st-nombre">Nombre completo</label><input class="input" id="st-nombre" value="David Solís Miranda"></div>
-        <div class="field"><label for="st-correo">Correo</label><input class="input" id="st-correo" type="email" autocomplete="email"></div>
-        <div class="field"><label for="st-clave">Contraseña (mínimo 10 caracteres)</label><input class="input" id="st-clave" type="password" autocomplete="new-password"></div>
-        <div class="field"><label for="st-clave2">Repetí la contraseña</label><input class="input" id="st-clave2" type="password" autocomplete="new-password"></div>
-        <div class="field wide"><label for="st-token">Token de GitHub (fine-grained, solo este repositorio, Contents: Read and write)</label><input class="input" id="st-token" type="password" autocomplete="off" placeholder="github_pat_…"></div>
-        <div class="field wide"><label for="st-datos">Datos iniciales (opcional): archivo datos-iniciales.json</label><input class="input" id="st-datos" type="file" accept="application/json,.json"></div>
-      </div>
-      <div class="foot" style="margin-top:16px"><button class="btn btn-red" type="submit">Crear acceso y cifrar los datos</button></div>
-    </form>
-  </div>
-</main>
 <!-- ============ LOGIN ============ -->
 <main id="v-login">
   <section class="band">
