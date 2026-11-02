@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="../img/icono-180.png?v=2">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,900&family=Instrument+Serif:ital@1&display=swap">
 <style>
 /* Layout: banda azul profundo con semitono animado y la sierra de 22 dientes girando lenta; contenido en tarjetas claras que suben sobre la banda; franja amarilla-roja-azul del manual como firma */
 :root{
@@ -667,6 +667,28 @@ footer img{width:34px;height:34px}
 :root:not(.hc) .input:focus,:root:not(.hc) .search:focus{border-color:#5fd0e0;box-shadow:0 0 0 4px rgba(95,208,224,.25)}
 :root:not(.hc) .input::placeholder{color:rgba(232,246,248,.45)}
 :root:not(.hc) .saw::before,:root:not(.hc) .band::after,:root:not(.hc) .poster::after{filter:drop-shadow(0 18px 30px rgba(0,0,0,.5))}
+
+/* ===== Estilo de referencia: grafito índigo con foco de luz y vidrio oscuro ===== */
+:root:not(.hc),:root:not(.hc) .azul,:root:not([data-theme="light"]):not(.hc),:root:not([data-theme="light"]):not(.hc) .azul,:root[data-theme="dark"]:not(.hc),:root[data-theme="dark"]:not(.hc) .azul{--azul:#8ea2d8;--azul-2:#5d6fa3;--noche:#0d0f1a;--link:#b9c7f0;--band-a:#1b2238;--band-b:#0d0f1a;--bg:#0b0d16;--surface:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.02));--surface-2:rgba(255,255,255,.05);--fg:#f2f4fa;--muted:#9aa3bd;--line:rgba(255,255,255,.08);--glass:rgba(255,255,255,.06);--glass-line:rgba(255,255,255,.14);--campo:rgba(255,255,255,.045);--ok:#4ade80;--ok-bg:rgba(74,222,128,.10);--bad:#f87171;--bad-bg:rgba(248,113,113,.10);--warn:#fbbf24;--warn-bg:rgba(251,191,36,.10);--grad:radial-gradient(60% 70% at 50% -10%,rgba(120,138,195,.55) 0%,rgba(40,48,80,.4) 45%,transparent 75%),linear-gradient(180deg,#141829 0%,#0b0d16 100%);--lg-fill:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));--lg-rim:inset 0 1px 0 rgba(255,255,255,.14),inset 0 0 0 1px rgba(255,255,255,.03),0 30px 60px -30px rgba(0,0,0,.9);--shadow:var(--lg-rim);color-scheme:dark}
+:root:not(.hc) body,:root:not(.hc) body:has(.azul:not([hidden])){background:radial-gradient(55% 45% at 50% -5%,rgba(120,138,195,.45),transparent 70%),radial-gradient(60% 50% at 100% 100%,rgba(38,56,120,.45),transparent 70%),linear-gradient(180deg,#121526,#0b0d16 60%);background-attachment:fixed;color:var(--fg)}
+:root:not(.hc) .band::before,:root:not(.hc) .poster::before{background:radial-gradient(50% 80% at 50% -20%,rgba(140,158,215,.55),transparent 70%),radial-gradient(40% 60% at 95% 110%,rgba(38,56,120,.6),transparent 70%);filter:none}
+:root:not(.hc) .card,:root:not(.hc) .app,:root:not(.hc) .app:nth-child(n),:root:not(.hc) .tile,:root:not(.hc) .sumbar,:root:not(.hc) .prc-kpi,:root:not(.hc) .sheet,:root:not(.hc) .azul .prc-bar{border:1px solid rgba(255,255,255,.08);background:var(--lg-fill);box-shadow:var(--lg-rim)}
+:root:not(.hc) .head,:root:not(.hc) body:has(.azul:not([hidden])) .head{background:rgba(20,24,41,.55);border-color:rgba(255,255,255,.09);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 18px 40px -20px rgba(0,0,0,.9)}
+:root:not(.hc) body:has(.azul:not([hidden]))::before{background:#121526}
+:root:not(.hc) .btn-red,:root:not(.hc) .btn-blue,:root:not(.hc) .btn-red:hover,:root:not(.hc) .btn-blue:hover{background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.05));color:#fff;border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 16px 30px -18px rgba(0,0,0,.9)}
+:root:not(.hc) .btn-red:hover,:root:not(.hc) .btn-blue:hover{background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,.08))}
+:root:not(.hc) .btn-soft,:root:not(.hc) .chip,:root:not(.hc) .h-back{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+:root:not(.hc) .seg,:root:not(.hc) .st{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
+:root:not(.hc) .seg button[aria-pressed="true"]{background:rgba(255,255,255,.14);color:#fff}
+:root:not(.hc) .input:focus,:root:not(.hc) .search:focus{border-color:rgba(185,199,240,.6);box-shadow:0 0 0 4px rgba(142,162,216,.18)}
+:root:not(.hc) .input::placeholder{color:rgba(242,244,250,.4)}
+:root:not(.hc) .azul .tile-top,:root:not(.hc) .azul .tile:nth-child(n) .tile-top{background:radial-gradient(90% 120% at 50% -20%,rgba(140,158,215,.35),rgba(255,255,255,.02) 70%);color:#e4e9f8}
+:root:not(.hc) .azul .tile-top svg{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+:root:not(.hc) .azul .dias .d.sel{background:#e4e9f8;border-color:#e4e9f8;color:#0d0f1a}
+:root:not(.hc) .azul .tabs button[aria-selected="true"]{border-bottom-color:#e4e9f8}
+:root:not(.hc) h1 em,:root:not(.hc) .poster-h em,:root:not(.hc) h2 em{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;color:#c9d2ec;letter-spacing:0}
+:root:not(.hc) .eyebrow{color:#9aa3bd}
+:root:not(.hc) .st button[aria-pressed="true"][data-v="A"]{background:rgba(74,222,128,.85);color:#06210f}
 /* Soy Macero y formularios en celular */
 @media (max-width:560px){
   .fgrid{grid-template-columns:1fr}
@@ -971,12 +993,12 @@ footer img{width:34px;height:34px}
 <div class="scrim" id="scrim" hidden></div>
 <aside class="sheet" id="sheet" hidden aria-modal="true" role="dialog"></aside>
 <div class="toast" id="toast" hidden role="status"></div>
-<script src="../lib/estado-cuenta.js?v=1793525021"></script>
-<script src="../lib/almacen.js?v=1793525021"></script>
-<script src="../lib/operaciones.js?v=1793525021"></script>
-<script src="../lib/rh.js?v=1793525021"></script>
-<script src="../lib/webpush.js?v=1793525021"></script>
-<script src="../lib/portal.js?v=1793525021"></script>
+<script src="../lib/estado-cuenta.js?v=1793587201"></script>
+<script src="../lib/almacen.js?v=1793587201"></script>
+<script src="../lib/operaciones.js?v=1793587201"></script>
+<script src="../lib/rh.js?v=1793587201"></script>
+<script src="../lib/webpush.js?v=1793587201"></script>
+<script src="../lib/portal.js?v=1793587201"></script>
 
 </body>
 </html>
