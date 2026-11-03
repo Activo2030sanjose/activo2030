@@ -723,6 +723,7 @@ select,select.input{color-scheme:dark}
 select option,select optgroup{background:#151a2c;color:#f2f4fa}
 .pend-l{grid-column:1/-1;font-size:.75rem;font-weight:700;color:var(--bad)}
 /* Soy Macero y formularios en celular */
+
 @media (max-width:560px){
   .fgrid{grid-template-columns:1fr}
   .input,select.input,.search,textarea.input{font-size:16px}
@@ -738,6 +739,17 @@ select option,select optgroup{background:#151a2c;color:#f2f4fa}
   .sumbar{padding:12px 14px;gap:10px}.sumbar .cts{flex:1 1 100%}.sumbar .btn{width:100%;min-height:48px}
   .seg button{min-height:44px}
   .ok-panel .bt .btn{width:100%}
+}
+
+/* Barra de envío en celular: resumen en botón de información */
+.sum-info{display:none;align-items:center;gap:8px;border:1px solid var(--line);background:var(--glass);color:var(--fg);border-radius:999px;padding:.6rem .9rem;font:inherit;font-weight:700;font-size:.85rem;cursor:pointer;min-height:48px;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.cts-pop{display:flex;flex-direction:column;gap:12px;font-size:1rem;margin:6px 0 14px}
+.cts-pop span{display:flex;align-items:center;gap:10px}
+@media (max-width:760px){
+  .sumbar{display:flex;flex-wrap:nowrap;gap:10px;padding:10px 12px}
+  .sumbar .cts{display:none}
+  .sum-info{display:inline-flex;flex:none}
+  .sumbar #mc-guardar{flex:1;width:auto;min-height:48px}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
@@ -986,6 +998,7 @@ select option,select optgroup{background:#151a2c;color:#f2f4fa}
 
     <div class="card sumbar">
       <div class="cts num" id="mc-cts"></div>
+      <button type="button" class="sum-info" id="mc-info" aria-label="Ver el resumen de la sesión"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.5"/></svg><span id="mc-info-n"></span></button>
       <button type="button" class="btn btn-red" id="mc-guardar">Enviar registro</button>
     </div>
 
@@ -1028,12 +1041,12 @@ select option,select optgroup{background:#151a2c;color:#f2f4fa}
 <div class="scrim" id="scrim" hidden></div>
 <aside class="sheet" id="sheet" hidden aria-modal="true" role="dialog"></aside>
 <div class="toast" id="toast" hidden role="status"></div>
-<script src="../lib/estado-cuenta.js?v=1793672107"></script>
-<script src="../lib/almacen.js?v=1793672107"></script>
-<script src="../lib/operaciones.js?v=1793672107"></script>
-<script src="../lib/rh.js?v=1793672107"></script>
-<script src="../lib/webpush.js?v=1793672107"></script>
-<script src="../lib/portal.js?v=1793672107"></script>
+<script src="../lib/estado-cuenta.js?v=1793672429"></script>
+<script src="../lib/almacen.js?v=1793672429"></script>
+<script src="../lib/operaciones.js?v=1793672429"></script>
+<script src="../lib/rh.js?v=1793672429"></script>
+<script src="../lib/webpush.js?v=1793672429"></script>
+<script src="../lib/portal.js?v=1793672429"></script>
 
 </body>
 </html>
