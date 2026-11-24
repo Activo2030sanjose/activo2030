@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="../img/icono-180.png?v=2">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <style>
 /* Layout: banda azul profundo con semitono animado y la sierra de 22 dientes girando lenta; contenido en tarjetas claras que suben sobre la banda; franja amarilla-roja-azul del manual como firma */
 :root{
@@ -685,7 +685,7 @@ footer img{width:34px;height:34px}
 :root:not(.hc) .azul .tile-top svg{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
 :root:not(.hc) .azul .dias .d.sel{background:#e4e9f8;border-color:#e4e9f8;color:#0d0f1a}
 :root:not(.hc) .azul .tabs button[aria-selected="true"]{border-bottom-color:#e4e9f8}
-:root:not(.hc) h1 em,:root:not(.hc) .poster-h em,:root:not(.hc) h2 em{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:400;color:#c9d2ec;letter-spacing:0}
+:root:not(.hc) h1 em,:root:not(.hc) .poster-h em,:root:not(.hc) h2 em{font-family:var(--f);font-style:italic;font-weight:400;color:#c9d2ec;letter-spacing:0}
 :root:not(.hc) .eyebrow{color:#9aa3bd}
 :root:not(.hc) .st button[aria-pressed="true"][data-v="A"]{background:rgba(74,222,128,.85);color:#06210f}
 
@@ -755,14 +755,14 @@ select option,select optgroup{background:#151a2c;color:#f2f4fa}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
 /* ===== v3: letra de las referencias, botones píldora y foco de luz ===== */
-:root{--f:"Inter",-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;--f-display:var(--f);--f-body:var(--f)}
+:root{--f:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue","Inter",Arial,sans-serif;--f-display:var(--f);--f-body:var(--f)}
 body{font-family:var(--f)!important;-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
 h1,h2,h3{letter-spacing:-.025em;font-weight:600}
-h1 em,h2 em,h3 em,.poster-h em,.serif{font-family:"Playfair Display",Georgia,serif!important;font-style:italic!important;font-weight:500!important;letter-spacing:-.01em!important}
+h1 em,h2 em,h3 em,.poster-h em,.serif{font-family:var(--f)!important;font-style:italic!important;font-weight:400!important;letter-spacing:-.02em!important;opacity:.85}
 
 :root:not(.hc) body,:root:not(.hc) body:has(.azul:not([hidden])){background:radial-gradient(55% 40% at 50% -6%,rgba(160,172,230,.38),transparent 70%),radial-gradient(45% 55% at -8% 65%,rgba(218,41,28,.26),transparent 70%),radial-gradient(45% 50% at 108% 95%,rgba(61,91,255,.30),transparent 70%),linear-gradient(180deg,#0f1222,#07080f 65%);background-attachment:fixed}
 :root:not(.hc) .btn{border-radius:999px;font-weight:500}
-:root:not(.hc) .btn-red,:root:not(.hc) .btn-blue{background:#fff;color:#0b0d18;border:0;box-shadow:0 18px 34px -18px rgba(0,0,0,.9);font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:1.06em;letter-spacing:0}
+:root:not(.hc) .btn-red,:root:not(.hc) .btn-blue{background:#fff;color:#0b0d18;border:0;box-shadow:0 18px 34px -18px rgba(0,0,0,.9);font-family:var(--f);font-style:normal;font-weight:600;font-size:1em;letter-spacing:0}
 :root:not(.hc) .btn-red:hover,:root:not(.hc) .btn-blue:hover{background:#e9ebf5;color:#0b0d18}
 :root:not(.hc) .btn-soft{background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px)}
 :root:not(.hc) .card,:root:not(.hc) .tile,:root:not(.hc) .sheet,:root:not(.hc) .login-card{border-radius:28px}
