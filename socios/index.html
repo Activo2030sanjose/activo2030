@@ -669,6 +669,18 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-body);-webkit-font
 .st button[aria-pressed="true"][data-v="J"]{background:var(--amarillo);color:var(--azul)}
 .st button[aria-pressed="true"][data-v="I"]{background:var(--rojo);color:#fff}
 .chip,.voto{border-radius:999px}
+
+/* v4 noche */
+:root[data-theme="dark"]{--bg:#070b2a;--surface:#0f1645;--surface-2:#17205a}
+:root[data-theme="dark"] .card,:root[data-theme="dark"] .kpi,:root[data-theme="dark"] .dash-kpi{background:var(--surface);box-shadow:0 18px 40px -18px rgba(0,0,0,.7)}
+:root[data-theme="dark"] .head{background:#0b1138;color:var(--fg);box-shadow:0 1px 0 var(--line)}
+:root[data-theme="dark"] .btn-soft{background:var(--surface-2);color:var(--fg)}
+:root[data-theme="dark"] .input,:root[data-theme="dark"] .search{background:#0b1138;color:var(--fg)}
+:root[data-theme="dark"] .saldo .amount{color:var(--amarillo)}
+:root[data-theme="dark"] .band .btn-soft{background:rgba(255,255,255,.12);color:#fff}
+.head .wrap{flex-wrap:nowrap}.head .brand{white-space:nowrap;min-width:0}
+.tema-btn{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;cursor:pointer;background:var(--surface-2);border:1px solid var(--line);color:var(--fg);margin-left:8px}
+.tema-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 /* Intro del logo */
 #intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;overflow:hidden;background:#001489;transition:opacity .7s ease,visibility .7s}
 #intro.s3{background:#fff}
@@ -725,6 +737,7 @@ html.paused #intro,html.paused #intro *,html.paused #intro *:after,html.paused #
 @media (prefers-reduced-motion:reduce){#intro{display:none}}
 </style>
 
+<script src="../lib/tema.js?v=1"></script>
 </head>
 <body>
 <div id="intro" role="status" aria-label="Cargando">
