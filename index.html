@@ -25,7 +25,7 @@
 })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,900&family=Instrument+Serif:ital@1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap">
 <style>
 :root{--azul:#001489;--noche:#000a47;--rojo:#da291c;--amarillo:#fedd00;--fg:#0d1238;--muted:#5a6080;--line:#dfe2ef;--surface:#fff;--surface-2:#eef0f8;
   --f:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue","Lato",Arial,sans-serif;color-scheme:light}
@@ -39,7 +39,7 @@ body{position:relative;overflow-x:hidden;background:radial-gradient(55% 45% at 5
 .go{border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 1px 1px rgba(255,255,255,.75),0 12px 24px -12px rgba(57,87,237,.85)}
 .ico{border-radius:18px;box-shadow:inset 0 1px 1px rgba(255,255,255,.6)}
 .opt.socios .go,.opt.colab .go{background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.05))!important;border:1px solid rgba(255,255,255,.16)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22)!important}.ico.r,.ico.y{background:rgba(255,255,255,.07)!important;color:#e4e9f8!important;border:1px solid rgba(255,255,255,.12)}
-h1 em{font-family:"Instrument Serif",Georgia,serif!important;font-weight:400!important;color:#c9d2ec!important}.eyebrow{color:#9aa3bd!important}
+h1 em{font-family:"Playfair Display",Georgia,serif!important;font-weight:400!important;color:#c9d2ec!important}.eyebrow{color:#9aa3bd!important}
 canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
 .saw{position:fixed;width:min(640px,110vw);aspect-ratio:1;right:-14vw;top:-18vw;pointer-events:none;animation:spin 80s linear infinite}
 .saw img{display:none}
@@ -74,6 +74,15 @@ footer{position:relative;background:var(--surface);color:var(--muted);font-size:
 footer div{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 @media (max-width:700px){.opts{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== v3: letra de las referencias, botones píldora y foco de luz ===== */
+:root{--f:"Inter",-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;--f-display:var(--f);--f-body:var(--f)}
+body{font-family:var(--f)!important;-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
+h1,h2,h3{letter-spacing:-.025em;font-weight:600}
+h1 em,h2 em,h3 em,.poster-h em,.serif{font-family:"Playfair Display",Georgia,serif!important;font-style:italic!important;font-weight:500!important;letter-spacing:-.01em!important}
+
+body{background:radial-gradient(55% 40% at 50% -6%,rgba(160,172,230,.38),transparent 70%),radial-gradient(45% 55% at -8% 65%,rgba(218,41,28,.26),transparent 70%),radial-gradient(45% 50% at 108% 95%,rgba(61,91,255,.30),transparent 70%),linear-gradient(180deg,#0f1222,#07080f 65%)!important;background-attachment:fixed!important}
+.go{background:#fff!important;color:#0b0d18!important;border:0!important;border-radius:999px!important;font-family:"Playfair Display",Georgia,serif!important;font-style:italic;font-weight:500!important;font-size:1.05em}
 </style>
 </head>
 <body>
