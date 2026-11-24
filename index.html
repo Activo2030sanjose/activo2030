@@ -2,7 +2,7 @@
 <html lang="es-CR">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-xmHC5UoVDDA3mW5Z41I0R8I/ANdkRYArUMEdyfHhzYc=' 'sha256-7jF+feP9AqBj1VOmeVsF5vvvj8Y1reF+R4T2Hpau3pk=' 'sha256-TSoOnaDBTx016PIafmX7oX8PpUML3dz05DFqRNMXsqI='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-wYv+iNe5XZ6TWtPD9UiFmq05W1UJovjpftXcwH5E2dY=' 'sha256-7jF+feP9AqBj1VOmeVsF5vvvj8Y1reF+R4T2Hpau3pk=' 'sha256-TSoOnaDBTx016PIafmX7oX8PpUML3dz05DFqRNMXsqI='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex, nofollow">
@@ -206,6 +206,6 @@ html.paused #intro,html.paused #intro *,html.paused #intro *:after,html.paused #
  window.A2030Intro={play};
  let seen=false;try{seen=sessionStorage.getItem("a2030i")==="1";sessionStorage.setItem("a2030i","1")}catch(e){}
  const urls=[...I.querySelectorAll(".ly")].map(e=>getComputedStyle(e).backgroundImage.replace(/^url\(["']?|["']?\)$/g,""));
- Promise.all(urls.map(u=>{const i=new Image();i.src=u;return i.decode?i.decode().catch(()=>{}):0})).then(()=>requestAnimationFrame(()=>requestAnimationFrame(play)));setTimeout(()=>{if(!I.className)play()},1200)})();</script>
+ if(seen&&!DEMO){I.classList.add("done");return}Promise.all(urls.map(u=>{const i=new Image();i.src=u;return i.decode?i.decode().catch(()=>{}):0})).then(()=>requestAnimationFrame(()=>requestAnimationFrame(play)));setTimeout(()=>{if(!I.className)play()},1200)})();</script>
 </body>
 </html>
