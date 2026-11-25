@@ -726,6 +726,23 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-body);-webkit-font
  body.con-bnav .a11yBtn{bottom:calc(170px + env(safe-area-inset-bottom,0px))!important;width:44px;height:44px}
  :root[data-theme="dark"] body.con-bnav .bnav:not([hidden]){background:#0f1a6e}
 }
+
+/* v4 colaboradores: versión día (clara) distinta de la noche */
+:root:not([data-theme="dark"]) .azul{--bg:#f4f5fa;--surface:#fff;--surface-2:#f1f3fa;--fg:#0d1440;--muted:#747576;--line:#e3e6f0;--link:#001489;--ok:#0d7a3c;--ok-bg:#e1f4e9;--warn:#8f5600;--warn-bg:#fff3c4;--bad:#b3241a;--bad-bg:#fde5e2;--shadow:0 10px 30px rgba(0,20,137,.10);color-scheme:light}
+:root:not([data-theme="dark"]) body:has(.azul:not([hidden])){background:#f4f5fa}
+:root:not([data-theme="dark"]) body:has(.azul:not([hidden]))::before{background:#f4f5fa}
+:root:not([data-theme="dark"]) body:has(.azul:not([hidden])) .sheet{--bg:#f4f5fa;--surface:#fff;--surface-2:#f1f3fa;--fg:#0d1440;--muted:#747576;--line:#e3e6f0;--bad:#b3241a;--bad-bg:#fde5e2;--ok:#0d7a3c;--ok-bg:#e1f4e9;color-scheme:light;background:#fff;color:#0d1440}
+:root:not([data-theme="dark"]) body:has(.azul:not([hidden])) .head{background:#fff;color:var(--fg);border-bottom:0;box-shadow:0 1px 0 #e3e6f0}
+:root:not([data-theme="dark"]) body:has(.azul:not([hidden])) footer{background:#fff;color:#747576;border-color:#e3e6f0}
+:root:not([data-theme="dark"]) .azul .tile,:root:not([data-theme="dark"]) .azul .app{background:#fff;border:1px solid #e3e6f0;box-shadow:0 10px 30px rgba(0,20,137,.10)}
+:root:not([data-theme="dark"]) .azul .tile-b b,:root:not([data-theme="dark"]) .azul .app-t{color:#0d1440}
+:root:not([data-theme="dark"]) .azul .tile-b small,:root:not([data-theme="dark"]) .azul .app-d{color:#747576}
+:root:not([data-theme="dark"]) .azul .tile-b::after{color:#da291c}
+:root:not([data-theme="dark"]) .azul .app-ico,:root:not([data-theme="dark"]) .azul .app-ico.prc small{color:#001489}
+:root:not([data-theme="dark"]) .azul .to-card,:root:not([data-theme="dark"]) .azul .sube>.card{background:#fff;border-color:#e3e6f0}
+:root:not([data-theme="dark"]) .azul .prc-h span{background:#fedd00;color:#001489}
+:root:not([data-theme="dark"]) .head .prc-txt b{color:#0d1440!important}:root:not([data-theme="dark"]) .head .prc-txt span{color:#da291c!important}
+:root[data-theme="dark"] .head .prc-txt b{color:#fff!important}:root[data-theme="dark"] .head .prc-txt span{color:#fedd00!important}
 /* Intro del logo */
 #intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;overflow:hidden;background:#001489;transition:opacity .7s ease,visibility .7s}
 #intro.s3{background:#fff}
