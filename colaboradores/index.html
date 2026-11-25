@@ -705,6 +705,26 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-body);-webkit-font
  #h-user{flex:1 1 100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px}
  #h-user #salir{grid-column:1/-1}
 }
+
+/* Botonera inferior estilo Pasaporte (celular) */
+.bnav{display:none}
+.h-av{display:none}
+@media (max-width:760px){
+ #h-user{display:none!important}
+ .head .wrap{flex-wrap:nowrap!important}
+ .h-av{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;background:linear-gradient(140deg,#ff6a5c,var(--rojo));color:#fff;font-weight:900;font-size:.95rem;box-shadow:0 0 0 3px var(--amarillo),0 8px 18px -8px rgba(218,41,28,.7);order:5;margin-left:8px}
+ body.con-bnav .bnav:not([hidden]){display:flex;position:fixed;z-index:40;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));background:var(--azul);border-radius:26px;padding:6px;gap:2px;box-shadow:0 18px 40px -12px rgba(0,20,137,.55)}
+ .bnav .bn{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:9px 2px 8px;border:0;border-radius:20px;background:transparent;color:rgba(255,255,255,.82);font:inherit;font-size:.72rem;font-weight:800;cursor:pointer;-webkit-tap-highlight-color:transparent}
+ .bnav .bn svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+ .bnav .bn span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+ .bnav .bn.on{background:#fff;color:var(--azul)}
+ .bnav .bn:focus-visible{outline:3px solid var(--amarillo);outline-offset:-3px}
+ body.con-bnav{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+ body.con-bnav .mbar{bottom:calc(88px + env(safe-area-inset-bottom,0px))!important;left:12px!important;right:12px!important;border-radius:20px;border:1px solid var(--line);box-shadow:var(--shadow)}
+ body.con-bnav .sumbar{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+ body.con-bnav .a11yBtn{bottom:calc(170px + env(safe-area-inset-bottom,0px))!important;width:44px;height:44px}
+ :root[data-theme="dark"] body.con-bnav .bnav:not([hidden]){background:#0f1a6e}
+}
 /* Intro del logo */
 #intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;overflow:hidden;background:#001489;transition:opacity .7s ease,visibility .7s}
 #intro.s3{background:#fff}
@@ -1070,7 +1090,7 @@ html.paused #intro,html.paused #intro *,html.paused #intro *:after,html.paused #
 <script src="../lib/operaciones.js?v=1794786959"></script>
 <script src="../lib/rh.js?v=1794786959"></script>
 <script src="../lib/webpush.js?v=1794786959"></script>
-<script src="../lib/portal.js?v=1794786959"></script>
+<script src="../lib/portal.js?v=b1794786959"></script>
 
 <script src="../lib/intro.js?v=2"></script>
 </body>
