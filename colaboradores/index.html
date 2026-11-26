@@ -749,6 +749,8 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-body);-webkit-font
 .usu-bar{display:flex;flex-direction:column;gap:10px;padding:0 0 14px}
 .usu-f{display:flex;gap:6px;flex-wrap:wrap}
 .chip-f{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:7px 12px;font-weight:800;font-size:.8rem;cursor:pointer}
+.clv-t{width:100%;border-collapse:collapse;font-size:.88rem}.clv-t th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 12px;border-bottom:2px solid var(--line)}.clv-t td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:middle}.clv-t code{font-size:.92rem;white-space:nowrap}.clv-x{overflow:auto}.clv-t .bt{display:flex;gap:6px;flex-wrap:wrap}
+@media(max-width:700px){.clv-t thead{display:none}.clv-t tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}.clv-t td{display:block;border:0;padding:4px 12px}}
 .chip-f b{opacity:.6;margin-left:2px}.chip-f.on{background:var(--azul);color:#fff;border-color:var(--azul)}.chip-f.on b{opacity:.85}
 /* Intro del logo */
 #intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;overflow:hidden;background:#001489;transition:opacity .7s ease,visibility .7s}
@@ -940,7 +942,7 @@ html.paused #intro,html.paused #intro *,html.paused #intro *:after,html.paused #
       <nav class="tabs" id="a-tabs" role="tablist" aria-label="Secciones de Tesorería">
         <button role="tab" data-tab="dashboard">Dashboard</button><button role="tab" data-tab="socios">Socios</button><button role="tab" data-tab="notificaciones">Notificaciones</button><button role="tab" data-tab="sesiones">Sesiones</button>
         <button role="tab" data-tab="revision">Revisión <span class="badge-n" id="rev-n" hidden></span></button><button role="tab" data-tab="descargas">Descargas</button>
-        <button role="tab" data-tab="montos">Montos y datos</button><button role="tab" data-tab="usuarios" id="tab-usuarios">Usuarios</button><button role="tab" data-tab="config" id="tab-config">Configuración</button>
+        <button role="tab" data-tab="montos">Montos y datos</button><button role="tab" data-tab="usuarios" id="tab-usuarios">Usuarios</button><button role="tab" data-tab="claves" id="tab-claves">Contraseñas</button><button role="tab" data-tab="config" id="tab-config">Configuración</button>
       </nav>
       <section class="a-panel" id="p-dashboard" hidden><div id="dash"></div></section>
       <section class="a-panel" id="p-socios">
@@ -972,6 +974,7 @@ html.paused #intro,html.paused #intro *,html.paused #intro *:after,html.paused #
       <section class="a-panel" id="p-usuarios" hidden>
         <div class="tools"><h2>Usuarios</h2><button class="btn btn-soft" id="usu-imp" style="padding:.6rem 1.1rem">Importar usuarios</button><input type="file" id="usu-file" accept="application/json,.json" hidden><button class="btn btn-blue" id="usu-new" style="padding:.6rem 1.1rem">+ Nuevo usuario</button></div><ul class="list usu" id="usu-rows"></ul>
       </section>
+      <section class="a-panel" id="p-claves" hidden><div class="tools"><h2>Contraseñas</h2><button class="btn btn-soft" id="clv-todas" style="padding:.6rem 1.1rem">Mostrar todas</button></div><p class="muted" style="margin:0 0 12px">Solo el superadmin ve esta sección. Las contraseñas viajan cifradas; no las compartás por chats abiertos.</p><div id="clv-rows"></div></section>
       <section class="a-panel pad" id="p-config" hidden><div id="cfg-form"></div></section>
     </div>
   </div>
@@ -1115,7 +1118,7 @@ html.paused #intro,html.paused #intro *,html.paused #intro *:after,html.paused #
 <script src="../lib/operaciones.js?v=1794786959"></script>
 <script src="../lib/rh.js?v=c1"></script>
 <script src="../lib/webpush.js?v=1794786959"></script>
-<script src="../lib/portal.js?v=c1"></script>
+<script src="../lib/portal.js?v=c2"></script>
 
 <script src="../lib/intro.js?v=2"></script>
 </body>
