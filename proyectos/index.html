@@ -228,6 +228,20 @@ td.c .avs{vertical-align:middle}
 .pm-r{display:flex;align-items:center}.pm-r label{flex:1}
 .pm-x{width:30px!important;flex:none;justify-content:center;color:var(--muted)!important;border-radius:8px!important}.pm-x:hover{color:var(--rojo)!important;background:var(--card2)}
 .pmenu hr{margin:0}
+.bdg.az{background:var(--azul)}
+.modal.ancho{width:min(760px,calc(100% - 24px))}
+.bit{display:flex;flex-direction:column;gap:14px}
+.bit-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap}.bit-top h2{margin:0;font-size:1.4rem}.bit-top p{margin:4px 0 0}
+.bit-pend{background:var(--card);border-radius:16px;box-shadow:var(--sh);padding:14px 16px;border-left:6px solid var(--amarillo)}.bit-pend h3{margin:0 0 8px;font-size:1rem;display:flex;gap:8px;align-items:center}
+.bit-e{background:var(--card);border-radius:16px;box-shadow:var(--sh);padding:14px 16px;border-left:6px solid var(--azul)}
+.bit-e header{display:flex;gap:12px;align-items:center}.bit-e h3{margin:0;font-size:1.05rem}.bit-e h4{margin:12px 0 6px;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.bit-f{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:58px;height:58px;border-radius:14px;background:var(--azul);color:#fff}.bit-f b{font-size:1.4rem;line-height:1}.bit-f small{font-size:.66rem;text-transform:uppercase;font-weight:800;opacity:.85}
+.bit-n{white-space:pre-wrap;margin-top:10px;font-size:.92rem;line-height:1.55;background:var(--card2);border-radius:12px;padding:10px 12px}
+.acu{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:7px 0;border-bottom:1px solid var(--line)}.acu:last-child{border:0}
+.acu .at{flex:1;min-width:180px;font-weight:600}.acu.ok .at{text-decoration:line-through;color:var(--muted)}.acu.venc .at{color:var(--rojo)}
+.chip-a{font-size:.74rem;font-weight:700;background:var(--card2);border-radius:999px;padding:3px 9px;border:0;color:var(--ink)}.chip-a.lk{color:var(--azul);cursor:pointer}
+.acf{display:grid;grid-template-columns:1fr 170px 150px 40px;gap:6px;margin-bottom:6px}
+@media(max-width:640px){.acf{grid-template-columns:1fr 1fr}.acf [data-af="t"]{grid-column:1/-1}}
 @media print{.top,.bnav,.tools{display:none}}
 </style>
 </head>
@@ -236,6 +250,6 @@ td.c .avs{vertical-align:middle}
 <div id="toast" hidden role="status" aria-live="polite"></div>
 <script src="../lib/almacen.js?v=p1"></script>
 <script src="../lib/exceljs.min.js?v=p1"></script>
-<script src="../lib/proyectos.js?v=p8"></script>
+<script src="../lib/proyectos.js?v=p9"></script>
 </body>
 </html>
