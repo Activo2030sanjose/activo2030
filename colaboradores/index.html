@@ -756,6 +756,12 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-body);-webkit-font
 /* Administración: sin temas de finanzas */
 #v-admin.modo-adm #a-tabs button:not([data-tab="usuarios"]):not([data-tab="claves"]){display:none}
 #v-admin.modo-adm .a-hero .kpis{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+
+/* Perfil y módulos */
+.mod-h{font-size:.95rem;margin:18px 0 10px;padding-top:14px;border-top:1px solid var(--line)}
+.mod-c{display:flex;gap:10px;align-items:flex-start;background:var(--surface-2);border-radius:12px;padding:10px 12px;margin:0 0 12px}
+.mod-i{font-size:.84rem;margin:0 0 12px;background:var(--surface-2);border-radius:12px;padding:10px 12px}
+.mods{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}.mods i{font-style:normal;font-size:.7rem;font-weight:800;padding:3px 8px;border-radius:999px;background:var(--surface-2);color:var(--fg)}
 /* Intro del logo */
 #intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;overflow:hidden;background:#001489;transition:opacity .7s ease,visibility .7s}
 #intro.s3{background:#fff}
@@ -1122,7 +1128,7 @@ html.paused #intro,html.paused #intro *,html.paused #intro *:after,html.paused #
 <script src="../lib/operaciones.js?v=1794786959"></script>
 <script src="../lib/rh.js?v=c1"></script>
 <script src="../lib/webpush.js?v=1794786959"></script>
-<script src="../lib/portal.js?v=c4"></script>
+<script src="../lib/portal.js?v=c5"></script>
 
 <script src="../lib/intro.js?v=2"></script>
 </body>
