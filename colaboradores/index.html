@@ -744,6 +744,12 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-body);-webkit-font
 :root[data-theme="dark"] .head .prc-txt b{color:#fff!important}:root[data-theme="dark"] .head .prc-txt span{color:#fedd00!important}
 :root:not([data-theme="dark"]) .azul .app .prc-txt b,:root:not([data-theme="dark"]) .azul .app-ico.prc b{color:#001489!important}:root:not([data-theme="dark"]) .azul .app .prc-txt span{color:#da291c!important}:root:not([data-theme="dark"]) .azul .app .prc-ico{filter:drop-shadow(0 8px 14px rgba(0,20,137,.3))}
 .app .prc-ico rect{fill:#001489}
+
+/* Usuarios: buscador y filtros */
+.usu-bar{display:flex;flex-direction:column;gap:10px;padding:0 0 14px}
+.usu-f{display:flex;gap:6px;flex-wrap:wrap}
+.chip-f{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:7px 12px;font-weight:800;font-size:.8rem;cursor:pointer}
+.chip-f b{opacity:.6;margin-left:2px}.chip-f.on{background:var(--azul);color:#fff;border-color:var(--azul)}.chip-f.on b{opacity:.85}
 /* Intro del logo */
 #intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;overflow:hidden;background:#001489;transition:opacity .7s ease,visibility .7s}
 #intro.s3{background:#fff}
@@ -1107,9 +1113,9 @@ html.paused #intro,html.paused #intro *,html.paused #intro *:after,html.paused #
 <script src="../lib/estado-cuenta.js?v=1794786959"></script>
 <script src="../lib/almacen.js?v=1794786959"></script>
 <script src="../lib/operaciones.js?v=1794786959"></script>
-<script src="../lib/rh.js?v=1794786959"></script>
+<script src="../lib/rh.js?v=c1"></script>
 <script src="../lib/webpush.js?v=1794786959"></script>
-<script src="../lib/portal.js?v=b1794786959"></script>
+<script src="../lib/portal.js?v=c1"></script>
 
 <script src="../lib/intro.js?v=2"></script>
 </body>
