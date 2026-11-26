@@ -242,6 +242,20 @@ td.c .avs{vertical-align:middle}
 .chip-a{font-size:.74rem;font-weight:700;background:var(--card2);border-radius:999px;padding:3px 9px;border:0;color:var(--ink)}.chip-a.lk{color:var(--azul);cursor:pointer}
 .acf{display:grid;grid-template-columns:1fr 170px 150px 40px;gap:6px;margin-bottom:6px}
 @media(max-width:640px){.acf{grid-template-columns:1fr 1fr}.acf [data-af="t"]{grid-column:1/-1}}
+.cc{display:flex;flex-direction:column;gap:12px}
+.cc-top{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:flex-end}.cc-top h2{margin:0;font-size:1.4rem}.cc-top p{margin:4px 0 0;max-width:640px}
+.cc-tc{display:flex;flex-direction:column;gap:5px;font-size:.78rem;font-weight:800;color:var(--muted);min-width:240px}.cc-tc .input{font-size:1.1rem;font-weight:800}
+.aviso{background:#fff3c4;color:#7a5c00;border-radius:12px;padding:10px 14px;margin:0;font-weight:700}
+.cct td{padding:4px 6px}.cct td.n{color:var(--muted);font-weight:800;text-align:center;width:36px}.cct .num{text-align:right}
+.ci{width:100%;border:1px solid transparent;background:transparent;border-radius:8px;padding:7px 8px;min-width:0}.ci:hover{border-color:var(--line)}.ci:focus{border-color:var(--azul);background:var(--card);outline:0}
+.cct input[type=number].ci{text-align:right}
+.cct tfoot td{background:var(--card2);padding:10px 8px;border-bottom:1px solid var(--line)}
+.cc-tot td{background:var(--azul)!important;color:#fff;font-weight:900;font-size:1.05rem;letter-spacing:.02em}.cc-tot td:last-child{text-align:right;font-size:1.3rem}
+.kclk{cursor:pointer}
+.visor{position:fixed;z-index:86;inset:4vh 4vw;background:var(--card);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+.visor .vh2{display:flex;gap:10px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}.visor .vh2 b{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.visor iframe{flex:1;border:0;width:100%;background:#fff}.visor .vb{flex:1;overflow:auto;display:grid;place-items:center;background:var(--card2)}.visor .vb img{max-width:100%;max-height:100%}
+@media(max-width:760px){.visor{inset:0;border-radius:0}}
 @media print{.top,.bnav,.tools{display:none}}
 </style>
 </head>
@@ -250,6 +264,6 @@ td.c .avs{vertical-align:middle}
 <div id="toast" hidden role="status" aria-live="polite"></div>
 <script src="../lib/almacen.js?v=p1"></script>
 <script src="../lib/exceljs.min.js?v=p1"></script>
-<script src="../lib/proyectos.js?v=p9"></script>
+<script src="../lib/proyectos.js?v=p10"></script>
 </body>
 </html>
