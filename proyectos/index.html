@@ -95,8 +95,8 @@ main{max-width:1600px;margin:0 auto;padding:22px max(16px,env(safe-area-inset-le
 /* Grupos y tabla */
 .grp{margin-bottom:22px}
 .gh{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
-.gh .tg{border:0;background:none;color:var(--gc);font-size:1rem;width:26px}
-.gh .gn{font-weight:900;font-size:1.05rem;color:var(--gc);border:0;background:none;padding:2px 4px;border-radius:6px}
+.gh .tg{border:0;background:none;color:var(--gt,var(--gc));font-size:1rem;width:26px}
+.gh .gn{font-weight:900;font-size:1.05rem;color:var(--gt,var(--gc));border:0;background:none;padding:2px 4px;border-radius:6px}
 .gh .gt{font-size:.78rem;color:var(--muted);white-space:nowrap}
 .hd{cursor:grab;color:var(--muted);border:0;background:none;padding:0 4px;font-size:1rem;touch-action:none}
 .tw{overflow:auto;border-radius:14px;box-shadow:var(--sh);background:var(--card);border-left:5px solid var(--gc)}
@@ -152,7 +152,7 @@ tr.drag{opacity:.4}tr.over td{box-shadow:inset 0 2px 0 var(--rojo)}
 .gg{display:grid;grid-template-columns:220px 1fr;min-width:max-content}
 .gl{position:sticky;left:0;z-index:2;background:var(--card);border-right:1px solid var(--line)}
 .gl div,.gr .rw{height:34px;display:flex;align-items:center;border-bottom:1px solid var(--line);font-size:.82rem;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.gl .gx{font-weight:900;color:var(--gc);background:var(--card2)}.gl .sb{padding-left:24px;color:var(--muted)}
+.gl .gx{font-weight:900;color:var(--gt,var(--gc));background:var(--card2)}.gl .sb{padding-left:24px;color:var(--muted)}
 .gl div.it{cursor:pointer}
 .gr{position:relative}
 .gr .hdr,.gl .hdr{height:40px;position:sticky;top:0;background:var(--card2);z-index:1;font-size:.72rem;font-weight:900;color:var(--muted);border-bottom:1px solid var(--line)}
@@ -219,6 +219,8 @@ td.c .avs{vertical-align:middle}
 .c-logo{display:flex;align-items:center;height:64px;margin-top:4px}.c-logo img{max-height:64px;max-width:200px;object-fit:contain}
 .b-logo{height:48px;max-width:180px;object-fit:contain}
 .logo-up{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.lg-prev{display:grid;place-items:center;min-width:120px;height:64px;border:1.5px dashed var(--line);border-radius:12px;color:var(--muted);font-size:.8rem;padding:4px;background:#fff}.lg-prev img{max-height:56px;max-width:180px}
+:root[data-theme="dark"] .gh .tg,:root[data-theme="dark"] .gh .gn,:root[data-theme="dark"] .gl .gx{color:var(--gc)}
+.vg-c h3,.kc b{color:var(--ink)}
 @media print{.top,.bnav,.tools{display:none}}
 </style>
 </head>
@@ -227,6 +229,6 @@ td.c .avs{vertical-align:middle}
 <div id="toast" hidden role="status" aria-live="polite"></div>
 <script src="../lib/almacen.js?v=p1"></script>
 <script src="../lib/exceljs.min.js?v=p1"></script>
-<script src="../lib/proyectos.js?v=p6"></script>
+<script src="../lib/proyectos.js?v=p7"></script>
 </body>
 </html>
