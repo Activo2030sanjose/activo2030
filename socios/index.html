@@ -753,6 +753,10 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-body);-webkit-font
 .clv-t{width:100%;border-collapse:collapse;font-size:.88rem}.clv-t th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 12px;border-bottom:2px solid var(--line)}.clv-t td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:middle}.clv-t code{font-size:.92rem;white-space:nowrap}.clv-x{overflow:auto}.clv-t .bt{display:flex;gap:6px;flex-wrap:wrap}
 @media(max-width:700px){.clv-t thead{display:none}.clv-t tr{display:block;border-bottom:1px solid var(--line);padding:8px 0}.clv-t td{display:block;border:0;padding:4px 12px}}
 .chip-f b{opacity:.6;margin-left:2px}.chip-f.on{background:var(--azul);color:#fff;border-color:var(--azul)}.chip-f.on b{opacity:.85}
+
+/* Administración: sin temas de finanzas */
+#v-admin.modo-adm #a-tabs button:not([data-tab="usuarios"]):not([data-tab="claves"]){display:none}
+#v-admin.modo-adm .a-hero .kpis{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
 /* Intro del logo */
 #intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;overflow:hidden;background:#001489;transition:opacity .7s ease,visibility .7s}
 #intro.s3{background:#fff}
@@ -1119,7 +1123,7 @@ html.paused #intro,html.paused #intro *,html.paused #intro *:after,html.paused #
 <script src="../lib/operaciones.js?v=1794786959"></script>
 <script src="../lib/rh.js?v=c1"></script>
 <script src="../lib/webpush.js?v=1794786959"></script>
-<script src="../lib/portal.js?v=c3"></script>
+<script src="../lib/portal.js?v=c4"></script>
 
 <script src="../lib/intro.js?v=2"></script>
 </body>
